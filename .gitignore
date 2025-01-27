@@ -1,0 +1,44 @@
+# Python-specific
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+*.swo
+
+# Django-specific
+db.sqlite3          # SQLite database file
+*.sqlite3           # Any SQLite database files
+media/              # Uploaded media files
+staticfiles/        # Collected static files
+*.log               # Log files
+
+# Virtual Environment
+venv/
+.env/               # If you keep virtualenv in a .env directory
+*.env               # Environment configuration file
+
+# IDE/Editor-related files
+.idea/              # PyCharm project folder
+.vscode/            # VS Code settings folder
+*.iml
+
+# Node.js (if using Node for frontend)
+node_modules/       # Node modules directory
+
+# Operating system files
+.DS_Store           # macOS system file
+Thumbs.db           # Windows system file
+desktop.ini
+
+# Git-related files
+*.orig              # Merge conflict resolution backups
+
+# Test-related files
+htmlcov/            # Coverage reports
+*.cover             # Coverage reports
+.tox/               # Tox environments
+.cache              # Test cache
+
+# Others
+*.bak               # Backup files
