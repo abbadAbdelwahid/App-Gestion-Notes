@@ -19,6 +19,7 @@ venv/
 *.env               # Environment configuration file
 
 # IDE/Editor-related files
+.idea
 .idea/              # PyCharm project folder
 .vscode/            # VS Code settings folder
 *.iml
