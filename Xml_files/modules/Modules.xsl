@@ -68,6 +68,7 @@
             <th>Elements</th>
             <th>Department</th>
             <th>Class</th>
+            <th>Chef</th> <!-- ✅ Added Chef Column -->
           </tr>
           <xsl:apply-templates select="Modules/Module"/>
         </table>
@@ -86,6 +87,7 @@
       </td>
       <td><xsl:value-of select="Dept_Attachement"/></td>
       <td><xsl:value-of select="ClasseName"/></td>
+      <td><xsl:value-of select="Chef"/></td> <!-- ✅ Added Chef Field -->
     </tr>
   </xsl:template>
 

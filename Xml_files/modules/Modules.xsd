@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <!-- Root element -->
+    <xs:element name="Modules">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Module" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Module element with attributes -->
+    <xs:element name="Module">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ModuleName" type="xs:string"/>
+                <!-- Elements container must contain at least 1 Element -->
+                <xs:element name="Elements" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Element" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Dept_Attachement" type="xs:string"/>
+                <xs:element name="ClasseName" type="xs:string"/>
+                <xs:element name="Chef" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="code_module" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

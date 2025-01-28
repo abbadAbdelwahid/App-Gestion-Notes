@@ -7,9 +7,9 @@
       <Element>Programmation Orientée Objet : java</Element>
       <Element>xml &amp; applications</Element>
     </Elements>
-    <ModuleName>Programmation Orientée objet &amp; XML</ModuleName>
     <Dept_Attachement>SIC</Dept_Attachement>
     <ClasseName>GINF2</ClasseName>
+    <Chef>El Haddad </Chef>
   </Module>
   <Module code_module="GINF32">
     <ModuleName>Qualité &amp; approche processus </ModuleName>
@@ -18,9 +18,9 @@
       <Element>Cycle de vie logiciel et méthodes agiles</Element>
       <Element>Maitrise et optimisation des processus</Element>
     </Elements>
-    <ModuleName>Qualité &amp; approche processus </ModuleName>
     <Dept_Attachement>SIC</Dept_Attachement>
     <ClasseName>GINF2</ClasseName>
+    <Chef>Rahali el azzouzi </Chef>
   </Module>
   <Module code_module="GINF33">
     <ModuleName>Modélisation orientée objet et IHM</ModuleName>
@@ -28,9 +28,9 @@
       <Element>Modélisation orientée objet UML</Element>
       <Element>Interaction homme machine</Element>
     </Elements>
-    <ModuleName>Modélisation orientée objet et IHM</ModuleName>
     <Dept_Attachement>MI</Dept_Attachement>
     <ClasseName>GINF2</ClasseName>
+    <Chef>El alami hassoun</Chef>
   </Module>
   <Module code_module="GINF34">
     <ModuleName>Bases de données avancées I</ModuleName>
@@ -39,9 +39,9 @@
       <Element>Administration et sécurité des bases de données </Element>
       <Element>Base de données NoSQL</Element>
     </Elements>
-    <ModuleName>Bases de données avancées I</ModuleName>
     <Dept_Attachement>SIC</Dept_Attachement>
     <ClasseName>GINF2</ClasseName>
+    <Chef>Badir</Chef>
   </Module>
   <Module code_module="GINF35">
     <ModuleName>Administration et programmation système </ModuleName>
@@ -49,9 +49,9 @@
       <Element>administration système</Element>
       <Element>programmation système</Element>
     </Elements>
-    <ModuleName>Administration et programmation système </ModuleName>
     <Dept_Attachement>MI</Dept_Attachement>
     <ClasseName>GINF2</ClasseName>
+    <Chef>Amechnoue </Chef>
   </Module>
   <Module code_module="GINF36">
     <ModuleName>Langues et communication 2</ModuleName>
@@ -60,9 +60,9 @@
       <Element>Anglais professionnel</Element>
       <Element>Techniques de communication</Element>
     </Elements>
-    <ModuleName>Langues et communication 2</ModuleName>
     <Dept_Attachement>SIC</Dept_Attachement>
     <ClasseName>GINF2</ClasseName>
+    <Chef>Haris</Chef>
   </Module>
   <Module code_module="GINF41">
     <ModuleName>Technologies distribuées </ModuleName>
@@ -70,9 +70,9 @@
       <Element>Introduction à J2EE</Element>
       <Element>Programmation en C#</Element>
     </Elements>
-    <ModuleName>Technologies distribuées </ModuleName>
     <Dept_Attachement>SIC</Dept_Attachement>
     <ClasseName>GINF2</ClasseName>
+    <Chef>El haddad </Chef>
   </Module>
   <Module code_module="GINF42">
     <ModuleName>Bases de donnnées avancées II &amp; cloud</ModuleName>
@@ -81,9 +81,9 @@
       <Element>gestion des données distribuées </Element>
       <Element>Cloud comuting et infogérance</Element>
     </Elements>
-    <ModuleName>Bases de donnnées avancées II &amp; cloud</ModuleName>
     <Dept_Attachement>SIC</Dept_Attachement>
     <ClasseName>GINF2</ClasseName>
+    <Chef>badir</Chef>
   </Module>
   <Module code_module="GINF43">
     <ModuleName>Traitement d'image</ModuleName>
@@ -92,9 +92,9 @@
       <Element>Vision numérique</Element>
       <Element>processus stochastique</Element>
     </Elements>
-    <ModuleName>Traitement d'image</ModuleName>
     <Dept_Attachement>SIC</Dept_Attachement>
     <ClasseName>GINF2</ClasseName>
+    <Chef>Ezzine</Chef>
   </Module>
   <Module code_module="GINF44">
     <ModuleName>Programmation déclarative et TAV</ModuleName>
@@ -102,9 +102,9 @@
       <Element>programmation déclarative</Element>
       <Element>Technique algorithmique avancée</Element>
     </Elements>
-    <ModuleName>Programmation déclarative et TAV</ModuleName>
     <Dept_Attachement>MI</Dept_Attachement>
     <ClasseName>GINF2</ClasseName>
+    <Chef>El alami hassoun</Chef>
   </Module>
   <Module code_module="GINF45">
     <ModuleName>sécurité et cryptographie</ModuleName>
@@ -112,9 +112,9 @@
       <Element>Sécurité des systèmes </Element>
       <Element>cryptographie</Element>
     </Elements>
-    <ModuleName>sécurité et cryptographie</ModuleName>
     <Dept_Attachement>MI</Dept_Attachement>
     <ClasseName>GINF2</ClasseName>
+    <Chef>Lazaar</Chef>
   </Module>
   <Module code_module="GINF46">
     <ModuleName>Management de l'entreprise 2</ModuleName>
@@ -123,13 +123,8 @@
       <Element>projets collectifs &amp; stages </Element>
       <Element>Management de projet </Element>
     </Elements>
-    <ModuleName>Management de l'entreprise 2</ModuleName>
     <Dept_Attachement>SIC</Dept_Attachement>
     <ClasseName>GINF2</ClasseName>
-  </Module>
-  <Module code_module="nan">
-    <Elements>
-      <Element>  </Element>
-    </Elements>
+    <Chef>El haddad </Chef>
   </Module>
 </Modules>

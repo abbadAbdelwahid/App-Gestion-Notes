@@ -1,0 +1,14 @@
+<!ELEMENT Students (Student+)>
+<!ELEMENT Student (DateOfBirth, FirstName, LastName, ClasseName, Phone, Email)>
+<!ATTLIST Student CNE CDATA #REQUIRED>
+
+<!ELEMENT DateOfBirth (#PCDATA)>
+<!ELEMENT FirstName (#PCDATA)>
+<!ELEMENT LastName (#PCDATA)>
+<!ELEMENT ClasseName (#PCDATA)>
+<!ELEMENT Phone (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+
+<!NOTATION alpha_space_hyphen_apostrophe SYSTEM "AlphabetOnlyWithSpacesHyphenApostrophe">
+<!ATTLIST FirstName notation NOTATION (alpha_space_hyphen_apostrophe) #IMPLIED>
+<!ATTLIST LastName notation NOTATION (alpha_space_hyphen_apostrophe) #IMPLIED>
