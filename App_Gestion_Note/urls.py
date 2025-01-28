@@ -29,4 +29,3 @@ urlpatterns = [
     path('notes/', include('notes.urls')),
     path('pdfs/', include('pdf_generator.urls')),
 ]
-# urlpatterns += static("/students/", document_root=os.path.join(settings.BASE_DIR, "Xml_files", "students"))
