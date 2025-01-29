@@ -1,0 +1,10 @@
+<!ELEMENT Modules (Module+)>
+<!ELEMENT Module (ModuleName, Elements, Dept_Attachement, ClasseName, Chef)>
+<!ATTLIST Module code_module CDATA #REQUIRED>
+
+<!ELEMENT ModuleName (#PCDATA)>
+<!ELEMENT Elements (Element+)>
+<!ELEMENT Element (#PCDATA)>
+<!ELEMENT Dept_Attachement (#PCDATA)>
+<!ELEMENT ClasseName (#PCDATA)>
+<!ELEMENT Chef (#PCDATA)>
