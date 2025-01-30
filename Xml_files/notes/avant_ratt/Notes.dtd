@@ -1,0 +1,18 @@
+<!ELEMENT Notes (Students, Moyenne)>
+<!ATTLIST Notes module_code CDATA #REQUIRED>
+
+<!ELEMENT Students (Student+)>
+<!ELEMENT Student (CNE, FirstName, LastName, ModuleNote)>
+
+<!ELEMENT CNE (#PCDATA)>
+<!ELEMENT FirstName (#PCDATA)>
+<!ELEMENT LastName (#PCDATA)>
+<!ELEMENT ModuleNote (#PCDATA)>
+<!ELEMENT Moyenne (#PCDATA)>
+
+
+
+<!-- Constraints -->
+<!NOTATION alpha_only SYSTEM "AlphabeticOnlyWithApostropheHyphen">
+<!ATTLIST FirstName notation NOTATION (alpha_only) #IMPLIED>
+<!ATTLIST LastName notation NOTATION (alpha_only) #IMPLIED>

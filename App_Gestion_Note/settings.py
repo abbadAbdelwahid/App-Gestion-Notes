@@ -140,3 +140,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "Xml_files"),  # Keep existing static files
 ]
 
+

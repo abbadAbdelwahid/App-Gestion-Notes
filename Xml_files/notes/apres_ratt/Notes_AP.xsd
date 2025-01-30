@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+           vc:minVersion="1.1"
+           elementFormDefault="qualified">
+
+    <xs:element name="Notes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Students">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Student" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="CNE" type="xs:string"/>
+                                        <xs:element name="FirstName" type="xs:string"/>
+                                        <xs:element name="LastName" type="xs:string"/>
+                                        <xs:element name="ModuleNote" type="xs:decimal"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="Result" type="xs:string" use="required"/>
+                                    <xs:assert test="ModuleNote &gt;= 0 and ModuleNote &lt;= 20"/>
+                                    <xs:assert test="(@Result = 'V' and ModuleNote &gt;= 12) or (@Result = 'NV' and ModuleNote &lt; 12)"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Moyenne" type="xs:decimal"/>
+            </xs:sequence>
+            <xs:attribute name="module_code" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
