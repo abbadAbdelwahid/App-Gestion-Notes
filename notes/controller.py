@@ -136,3 +136,55 @@ def convert_resulting_notes_to_xml(excel_path, output_path, module):
         xml_file.write(updated_xml)
 
     print(f"✅ Well-formatted XML file created: {output_path}")
+
+
+
+#
+# def generate_final_results_in_xml(notes_path, output_path):
+#     """
+#     Converts a single Excel file (Note_final_detaillees.xlsx) into an XML file.
+#
+#     - Uses module codes directly.
+#     - Modules are those with two digits at the end.
+#     - Submodules are those with three digits at the end.
+#     """
+#     # Load the Excel file
+#     notes_df = pd.read_excel(notes_path)
+#
+#     # Create the root XML element
+#     root = ET.Element("resultats")
+#
+#     # Process each student's notes
+#     for _, row in notes_df.iterrows():
+#         student = ET.SubElement(root, "student", CNE=str(row['CNE']))
+#         ET.SubElement(student, "FirstName").text = str(row['FirstName'])
+#         ET.SubElement(student, "LastName").text = str(row['LastName'])
+#
+#         notes = ET.SubElement(student, "notes")
+#         module_data = {}
+#
+#         # Process each column after CNE, FirstName, LastName
+#         for col in notes_df.columns[3:]:
+#             code = str(col).strip()
+#             note = str(row[col]) if not pd.isna(row[col]) else "N/A"
+#
+#             if len(code) == 6:  # Sub-module (e.g., GINF311)
+#                 parent_code = code[:5]  # Extract parent module code (e.g., GINF31)
+#                 if parent_code in module_data:
+#                     module_element = module_data[parent_code]
+#                     ET.SubElement(module_element, "submodule", code=code, note=note)
+#
+#             elif len(code) == 5:  # Main module (e.g., GINF31)
+#                 module_element = ET.SubElement(notes, "module", code=code, note=note)
+#                 module_data[code] = module_element  # Store reference for sub-modules
+#
+#     # Generate the pretty XML string
+#     pretty_xml_str = prettify_xml(root)
+#
+#     # Write to the output file
+#     with open(output_path, "w", encoding="utf-8") as f:
+#         f.write(pretty_xml_str)
+#
+#
+#
+# generate_final_results_in_xml("../Excel_files/Note_final_detaillees.xlsx","../Xml_files/notes/resultats.xml")

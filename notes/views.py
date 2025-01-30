@@ -95,10 +95,11 @@ def get_notes_after_ratt(request, module_code):
     output_path = f"Xml_files/notes/apres_ratt/Notes_Module_{module_code}.xml"
 
     dtd_path = "Xml_files/notes/apres_ratt/Notes_Ing.dtd"
+    xsd_path = "Xml_files/notes/apres_ratt/Notes.xsd"
 
     convert_resulting_notes_to_xml(excel_path, output_path, module_code)
 
-    is_valid, validation_message = validate_xml_DTD(output_path, dtd_path=dtd_path)
+    is_valid, validation_message = validate_xml(output_path, dtd_path=dtd_path,xsd_path=xsd_path)
 
     if not is_valid:
         return HttpResponse(f" XML Validation Failed: {validation_message}", status=500)
