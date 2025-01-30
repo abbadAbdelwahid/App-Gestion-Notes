@@ -3,6 +3,8 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
+from django.http import HttpResponse
+
 
 def prettify_xml(elem):
 
@@ -62,3 +64,29 @@ def convert_students_excel_to_xml(excel_path, output_dir, class_name="GINF2"):
         xml_file.write(updated_xml)
 
     print(f"✅ Well-formatted XML file created with XSLT: {xml_path}")
+
+
+def generate_tp_groups(filePath):
+    tree = ET.parse(filePath)
+    root = tree.getroot()
+
+    students = root.findall("Student")
+    total_students = len(students)
+    group_size = 24
+    num_groups = total_students // group_size
+
+    tp_root = ET.Element("TPGroups")
+
+    for i in range(num_groups):
+        group = ET.SubElement(tp_root, "TPGroup")
+        group_number = ET.SubElement(group, "GroupNumber")
+        group_number.text = str(i + 1)
+
+        for student in students[i * group_size: (i + 1) * group_size]:
+            group.append(student)
+
+    tree = ET.ElementTree(tp_root)
+    tree.write("../Xml_files/students/TPGroups.xml", encoding="utf-8", xml_declaration=True)
+
+
+generate_tp_groups("../Xml_files/students/Students_GINF2.xml")

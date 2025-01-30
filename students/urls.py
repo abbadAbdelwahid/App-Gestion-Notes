@@ -7,6 +7,8 @@ from django.urls import path
 
 urlpatterns = [
     path('list/', get_students_xml, name='students_xml'),
+path('generate_tp_groups/', generate_tp_groups, name='generate_tp_groups'),
+
 ]
 
 
