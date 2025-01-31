@@ -139,52 +139,235 @@ def convert_resulting_notes_to_xml(excel_path, output_path, module):
 
 
 
-#
-# def generate_final_results_in_xml(notes_path, output_path):
-#     """
-#     Converts a single Excel file (Note_final_detaillees.xlsx) into an XML file.
-#
-#     - Uses module codes directly.
-#     - Modules are those with two digits at the end.
-#     - Submodules are those with three digits at the end.
-#     """
-#     # Load the Excel file
-#     notes_df = pd.read_excel(notes_path)
-#
-#     # Create the root XML element
-#     root = ET.Element("resultats")
-#
-#     # Process each student's notes
-#     for _, row in notes_df.iterrows():
-#         student = ET.SubElement(root, "student", CNE=str(row['CNE']))
-#         ET.SubElement(student, "FirstName").text = str(row['FirstName'])
-#         ET.SubElement(student, "LastName").text = str(row['LastName'])
-#
-#         notes = ET.SubElement(student, "notes")
-#         module_data = {}
-#
-#         # Process each column after CNE, FirstName, LastName
-#         for col in notes_df.columns[3:]:
-#             code = str(col).strip()
-#             note = str(row[col]) if not pd.isna(row[col]) else "N/A"
-#
-#             if len(code) == 6:  # Sub-module (e.g., GINF311)
-#                 parent_code = code[:5]  # Extract parent module code (e.g., GINF31)
-#                 if parent_code in module_data:
-#                     module_element = module_data[parent_code]
-#                     ET.SubElement(module_element, "submodule", code=code, note=note)
-#
-#             elif len(code) == 5:  # Main module (e.g., GINF31)
-#                 module_element = ET.SubElement(notes, "module", code=code, note=note)
-#                 module_data[code] = module_element  # Store reference for sub-modules
-#
-#     # Generate the pretty XML string
-#     pretty_xml_str = prettify_xml(root)
-#
-#     # Write to the output file
-#     with open(output_path, "w", encoding="utf-8") as f:
-#         f.write(pretty_xml_str)
-#
-#
-#
-# generate_final_results_in_xml("../Excel_files/Note_final_detaillees.xlsx","../Xml_files/notes/resultats.xml")
+def generate_final_results_in_xml_with_names(notes_path, output_path):
+    """
+    Converts a single Excel file (Note_final_detaillees.xlsx) into an XML file.
+
+    - Uses module codes directly.
+    - Modules are those with exactly 6 characters (e.g., GINF31, GINF32, ... GINF46).
+    - Submodules are those with exactly 7 characters (e.g., GINF311, GINF312, GINF461).
+    - Ensures every student has correct <notes> populated with modules and submodules.
+    - Adds 'name' attribute to each module and submodule based on modules_dict.
+    """
+    # Load the Excel file
+    modules_dict = {
+        'GINF31': 'Programmation Orientée objet & XML',
+        'GINF311': 'Programmation Orientée Objet : java',
+        'GINF312': 'xml & applications',
+
+        'GINF32': 'Qualité & approche processus',
+        'GINF321': 'Assurance controle qualité (ISO 9001)',
+        'GINF322': 'Cycle de vie logiciel et méthodes agiles',
+        'GINF323': 'Maitrise et optimisation des processus',
+
+        'GINF33': 'Modélisation orientée objet et IHM',
+        'GINF331': 'Modélisation orientée objet UML',
+        'GINF332': 'Interaction homme machine',
+
+        'GINF34': 'Bases de données avancées I',
+        'GINF341': 'Optimisation et qualité des bases de données',
+        'GINF342': 'Administration et sécurité des bases de données',
+        'GINF343': 'Base de données NoSQL',
+
+        'GINF35': 'Administration et programmation système',
+        'GINF351': 'Administration système',
+        'GINF352': 'Programmation système',
+
+        'GINF36': 'Langues et communication 2',
+        'GINF361': 'Espagnol II',
+        'GINF362': 'Anglais professionnel',
+        'GINF363': 'Techniques de communication',
+
+        'GINF41': 'Technologies distribuées',
+        'GINF411': 'Introduction à J2EE',
+        'GINF412': 'Programmation en C#',
+
+        'GINF42': 'Bases de données avancées II & cloud',
+        'GINF421': 'Gestion des données complexes',
+        'GINF422': 'Gestion des données distribuées',
+        'GINF423': 'Cloud computing et infogérance',
+
+        'GINF43': "Traitement d'image",
+        'GINF431': "Traitement de l'image",
+        'GINF432': 'Vision numérique',
+        'GINF433': 'Processus stochastique',
+
+        'GINF44': 'Programmation déclarative et TAV',
+        'GINF441': 'Programmation déclarative',
+        'GINF442': 'Technique algorithmique avancée',
+
+        'GINF45': 'Sécurité et cryptographie',
+        'GINF451': 'Sécurité des systèmes',
+        'GINF452': 'Cryptographie',
+
+        'GINF46': "Management de l'entreprise 2",
+        'GINF461': 'Économie & comptabilité 2',
+        'GINF462': 'Projets collectifs & stages',
+        'GINF463': 'Management de projet'
+    }
+    notes_df = pd.read_excel(notes_path)
+
+    # Create the root XML element
+    root = ET.Element("resultats")
+
+    # Process each student's notes
+    for _, row in notes_df.iterrows():
+        student = ET.SubElement(root, "student", CNE=str(row['CNE']))
+        ET.SubElement(student, "FirstName").text = str(row['FirstName'])
+        ET.SubElement(student, "LastName").text = str(row['LastName'])
+
+        notes = ET.SubElement(student, "notes")
+        module_elements = {}  # Dictionary to store created module elements
+
+        # Process each column after CNE, FirstName, LastName
+        for col in notes_df.columns[3:]:
+            code = str(col).strip()
+            note = str(row[col]) if not pd.isna(row[col]) else "N/A"
+            module_name = modules_dict.get(code, "Unknown")  # Get name from dictionary
+
+            if len(code) == 7:  # Sub-module (e.g., GINF311, GINF421)
+                parent_code = code[:6]  # Extract parent module code (e.g., GINF31, GINF42)
+                if parent_code not in module_elements:
+                    # Create the module first if it doesn't exist
+                    module_elements[parent_code] = ET.SubElement(
+                        notes, "module", code=parent_code, name=modules_dict.get(parent_code, "Unknown"), note="N/A"
+                    )
+                # Add submodule inside the corresponding module
+                ET.SubElement(module_elements[parent_code], "sous_module", code=code, name=module_name, note=note)
+
+            elif len(code) == 6:  # Main module (e.g., GINF31, GINF32, ..., GINF46)
+                module_elements[code] = ET.SubElement(notes, "module", code=code, name=module_name, note=note)
+
+    # Generate the pretty XML string
+    pretty_xml_str = prettify_xml(root)
+    pretty_xml_str = pretty_xml_str.replace('<?xml version="1.0" ?>', '<?xml version="1.0" encoding="utf-8"?>', 1)
+    # Write to the output file
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(pretty_xml_str)
+
+
+
+
+
+def generate_final_results_in_xml_with_moyenne(notes_path, output_path):
+    """
+    Converts a single Excel file (Note_final_detaillees.xlsx) into an XML file.
+
+    - Uses module codes directly.
+    - Modules are those with exactly 6 characters (e.g., GINF31, GINF32, ... GINF46).
+    - Submodules are those with exactly 7 characters (e.g., GINF311, GINF312, GINF461).
+    - Ensures every student has correct <notes> populated with modules and submodules.
+    - Adds 'name' attribute to each module and submodule based on modules_dict.
+    - Calculates and adds 'moyenne' for each student based on module notes.
+    """
+    # Load the Excel file
+    notes_df = pd.read_excel(notes_path)
+
+    # Module dictionary (mapping codes to names)
+    modules_dict = {
+        'GINF31': 'Programmation Orientée objet & XML',
+        'GINF311': 'Programmation Orientée Objet : java',
+        'GINF312': 'xml & applications',
+
+        'GINF32': 'Qualité & approche processus',
+        'GINF321': 'Assurance controle qualité (ISO 9001)',
+        'GINF322': 'Cycle de vie logiciel et méthodes agiles',
+        'GINF323': 'Maitrise et optimisation des processus',
+
+        'GINF33': 'Modélisation orientée objet et IHM',
+        'GINF331': 'Modélisation orientée objet UML',
+        'GINF332': 'Interaction homme machine',
+
+        'GINF34': 'Bases de données avancées I',
+        'GINF341': 'Optimisation et qualité des bases de données',
+        'GINF342': 'Administration et sécurité des bases de données',
+        'GINF343': 'Base de données NoSQL',
+
+        'GINF35': 'Administration et programmation système',
+        'GINF351': 'Administration système',
+        'GINF352': 'Programmation système',
+
+        'GINF36': 'Langues et communication 2',
+        'GINF361': 'Espagnol II',
+        'GINF362': 'Anglais professionnel',
+        'GINF363': 'Techniques de communication',
+
+        'GINF41': 'Technologies distribuées',
+        'GINF411': 'Introduction à J2EE',
+        'GINF412': 'Programmation en C#',
+
+        'GINF42': 'Bases de données avancées II & cloud',
+        'GINF421': 'Gestion des données complexes',
+        'GINF422': 'Gestion des données distribuées',
+        'GINF423': 'Cloud computing et infogérance',
+
+        'GINF43': "Traitement d'image",
+        'GINF431': "Traitement de l'image",
+        'GINF432': 'Vision numérique',
+        'GINF433': 'Processus stochastique',
+
+        'GINF44': 'Programmation déclarative et TAV',
+        'GINF441': 'Programmation déclarative',
+        'GINF442': 'Technique algorithmique avancée',
+
+        'GINF45': 'Sécurité et cryptographie',
+        'GINF451': 'Sécurité des systèmes',
+        'GINF452': 'Cryptographie',
+
+        'GINF46': "Management de l'entreprise 2",
+        'GINF461': 'Économie & comptabilité 2',
+        'GINF462': 'Projets collectifs & stages',
+        'GINF463': 'Management de projet'
+    }
+
+    # Create the root XML element
+    root = ET.Element("resultats")
+
+    # Process each student's notes
+    for _, row in notes_df.iterrows():
+        student = ET.SubElement(root, "student", CNE=str(row['CNE']))
+        ET.SubElement(student, "FirstName").text = str(row['FirstName'])
+        ET.SubElement(student, "LastName").text = str(row['LastName'])
+
+        notes = ET.SubElement(student, "notes")
+        module_elements = {}  # Dictionary to store created module elements
+        module_sum = 0  # Sum of module notes
+        module_count = 0  # Count of modules
+
+        # Process each column after CNE, FirstName, LastName
+        for col in notes_df.columns[3:]:
+            code = str(col).strip()
+            note = row[col] if not pd.isna(row[col]) else None
+            module_name = modules_dict.get(code, "Unknown")  # Get name from dictionary
+
+            if len(code) == 7:  # Sub-module (e.g., GINF311, GINF421)
+                parent_code = code[:6]  # Extract parent module code (e.g., GINF31, GINF42)
+                if parent_code not in module_elements:
+                    # Create the module first if it doesn't exist
+                    module_elements[parent_code] = ET.SubElement(
+                        notes, "module", code=parent_code, name=modules_dict.get(parent_code, "Unknown"), note="N/A"
+                    )
+                # Add submodule inside the corresponding module
+                ET.SubElement(module_elements[parent_code], "sous_module", code=code, name=module_name, note=str(note) if note is not None else "N/A")
+
+            elif len(code) == 6:  # Main module (e.g., GINF31, GINF32, ..., GINF46)
+                module_elements[code] = ET.SubElement(notes, "module", code=code, name=module_name, note=str(note) if note is not None else "N/A")
+                if note is not None:  # Add to sum for moyenne calculation
+                    module_sum += note
+                    module_count += 1
+
+        # Calculate moyenne
+        moyenne_value = round(module_sum / module_count, 2) if module_count > 0 else "N/A"
+        ET.SubElement(student, "moyenne").text = str(moyenne_value)
+
+    # Generate the pretty XML string
+    pretty_xml_str = prettify_xml(root)
+    pretty_xml_str = pretty_xml_str.replace('<?xml version="1.0" ?>', '<?xml version="1.0" encoding="utf-8"?>', 1)
+
+    # Write to the output file
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(pretty_xml_str)
+
+
+
+generate_final_results_in_xml_with_moyenne("../Excel_files/Note_final_detaillees.xlsx","../Xml_files/notes/resultats.xml")
