@@ -1,6 +1,7 @@
+
 import os
 import subprocess
-
+import xml.etree.ElementTree as ET
 try:
     from django.conf import settings
 
@@ -9,14 +10,14 @@ except:
     PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 
-def generate_releve_pdf():
+def generate_releve_pdf(xml,fo,pdf_filename):
     print(f"📂 Using project root: {PROJECT_ROOT}")
 
     fop_home = os.path.join(PROJECT_ROOT, "fop")
-    xml_file = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note", "Notes_GINF2.xml")
-    xslt_file = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note", "Notes_apres_ratt.xsl")
-    pdf_output_dir = os.path.join(PROJECT_ROOT, "pdf_generator", "result")
-    pdf_file = os.path.join(pdf_output_dir, "releve_notes.pdf")
+    xml_file = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note", xml)
+    xslt_file = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note", fo)
+    pdf_output_dir = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note")
+    pdf_file = os.path.join(pdf_output_dir, pdf_filename)
 
     os.makedirs(pdf_output_dir, exist_ok=True)
 
@@ -59,4 +60,93 @@ def generate_releve_pdf():
     return pdf_file
 
 
-generate_releve_pdf()
+
+
+def clean_xml_content(xml_str):
+    """Removes unwanted BOM characters and ensures clean XML."""
+    return xml_str.lstrip("\ufeff").strip()
+
+def find_student_by_cne(CNE):
+    """Runs an XQuery script inline in BaseX to extract a student by CNE and saves it to an XML file."""
+
+    # Get the absolute path to the project root
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
+    # Define BaseX executable path
+    basex_path = os.path.join(project_root, "BaseX", "bin", "basex.bat")  # Windows
+    if not os.path.exists(basex_path):
+        basex_path = os.path.join(project_root, "BaseX", "bin", "basex")  # Linux/macOS
+
+    # Ensure BaseX executable exists
+    if not os.path.exists(basex_path):
+        print(f"❌ ERROR: BaseX executable not found at {basex_path}")
+        return
+
+    print(f"🔍 Running BaseX from: {basex_path}")
+
+    # Paths for XML file
+    xml_file = os.path.join(project_root, "Xml_files", "notes", "resultats.xml").replace("\\", "/")
+    output_dir = os.path.join(project_root, "Xml_files", "releve_note")
+
+    # Ensure XML file exists
+    if not os.path.exists(xml_file):
+        print(f"❌ ERROR: File not found: {xml_file}")
+        return
+
+    # Ensure output directory exists
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    # XQuery formatted as a single-line string (important for Windows CMD)
+    xquery_inline = (
+        'declare option output:method "xml"; '
+        'declare option output:encoding "UTF-8"; '
+        f'for $student in doc("{xml_file}")//student[@CNE="{CNE}"] return $student'
+    )
+
+    # Construct BaseX command
+    command = [basex_path, "-q", xquery_inline]
+
+    print(f"🔍 Running command: {' '.join(command)}")
+
+    # Run BaseX XQuery
+    result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding="utf-8")
+
+    if result.stderr:
+        print(f"❌ ERROR: {result.stderr}")
+        return
+
+    student_xml = clean_xml_content(result.stdout.strip())
+
+    if not student_xml:
+        print(f"⚠️ No student found with CNE: {CNE}")
+        return
+
+    # Parse XML to extract FirstName & LastName
+    try:
+        student_tree = ET.ElementTree(ET.fromstring(student_xml))
+        root = student_tree.getroot()
+
+        first_name = root.find("FirstName").text if root.find("FirstName") is not None else "Unknown"
+        last_name = root.find("LastName").text if root.find("LastName") is not None else "Unknown"
+
+        # Generate output file path
+        output_filename = f"releve_note_{first_name}_{last_name}.xml"
+        output_path = os.path.join(output_dir, output_filename)
+
+        # Save extracted XML with proper UTF-8 encoding
+        with open(output_path, "w", encoding="utf-8") as file:
+            file.write(student_xml)
+
+        print(f"✅ Student XML saved at: {output_path}")
+        return output_filename
+
+    except ET.ParseError as e:
+        print(f"❌ XML Parsing Error: {e}")
+        return
+
+# Example usage
+# find_student_by_cne("21010395")
+
+# generate_releve_pdf()
+# generate_releve_pdf("releve_note_ABDELOUAHED_ABBAD.xml","Releve_de_Notes.xsl")
