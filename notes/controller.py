@@ -370,4 +370,4 @@ def generate_final_results_in_xml_with_moyenne(notes_path, output_path):
 
 
 
-generate_final_results_in_xml_with_moyenne("../Excel_files/Note_final_detaillees.xlsx","../Xml_files/notes/resultats.xml")
+# generate_final_results_in_xml_with_moyenne("../Excel_files/Note_final_detaillees.xlsx","../Xml_files/notes/resultats.xml")

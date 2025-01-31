@@ -24,8 +24,9 @@
                         <fo:table-body>
                             <fo:table-row>
                                 <fo:table-cell>
-                                    <fo:block>
-                                        <fo:external-graphic src="logoUae.png" width="2.7cm" height="3.0cm"/>
+                                    <fo:block text-align="left">
+                                        <fo:external-graphic src="url('file:///C:/Application-Gestion-Note/App-Gestion-Notes/logoUae.png')"
+                                            width="2.7cm" height="3.0cm"/>
                                     </fo:block>
                                 </fo:table-cell>
                                 <fo:table-cell>
@@ -37,8 +38,9 @@
                                     </fo:block>
                                 </fo:table-cell>
                                 <fo:table-cell>
-                                    <fo:block>
-                                        <fo:external-graphic src="ensa.png" width="4.3cm" height="2.5cm"/>
+                                    <fo:block text-align="right">
+                                        <fo:external-graphic src="url('file:///C:/Application-Gestion-Note/App-Gestion-Notes/ensa.png')"
+                                            width="4.3cm" height="2.5cm"/>
                                     </fo:block>
                                 </fo:table-cell>
                             </fo:table-row>
@@ -72,56 +74,32 @@
                             <xsl:for-each select="notes/module">
                                 <fo:table-row background-color="#f5f5f5" font-size="8pt">
                                     <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                        <fo:block font-weight="bold">
-                                            <xsl:value-of select="@code"/>
-                                        </fo:block>
+                                        <fo:block font-weight="bold"><xsl:value-of select="@code"/></fo:block>
                                     </fo:table-cell>
                                     <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                        <fo:block font-weight="bold">
-                                            <xsl:value-of select="@name"/>
-                                        </fo:block>
+                                        <fo:block font-weight="bold"><xsl:value-of select="@name"/></fo:block>
                                     </fo:table-cell>
                                     <fo:table-cell padding="3pt" border="0.5pt solid black" text-align="center">
-                                        <fo:block>
-                                            <xsl:value-of select="@note"/>
-                                        </fo:block>
+                                        <xsl:value-of select="@note"/>
                                     </fo:table-cell>
-                                    <fo:table-cell padding="3pt" border="0.5pt solid black" text-align="center">
-                                        <fo:block>2024/2025</fo:block>
-                                    </fo:table-cell>
-                                    <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                        <fo:block>&#160;</fo:block> <!-- Prevent Empty Cells -->
-                                    </fo:table-cell>
-                                    <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                        <fo:block>&#160;</fo:block>
-                                    </fo:table-cell>
+                                    <fo:table-cell padding="3pt" border="0.5pt solid black" text-align="center">2024/2025</fo:table-cell>
+                                    <fo:table-cell padding="3pt" border="0.5pt solid black">&#160;</fo:table-cell>
+                                    <fo:table-cell padding="3pt" border="0.5pt solid black">&#160;</fo:table-cell>
                                 </fo:table-row>
 
                                 <!-- Sous-modules -->
                                 <xsl:for-each select="sous_module">
                                     <fo:table-row font-size="8pt">
+                                        <fo:table-cell padding="3pt" border="0.5pt solid black">&#160;</fo:table-cell>
                                         <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                            <fo:block>&#160;</fo:block>
-                                        </fo:table-cell>
-                                        <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                            <fo:block>
-                                                <xsl:value-of select="@name"/>
-                                            </fo:block>
+                                            <fo:block><xsl:value-of select="@name"/></fo:block>
                                         </fo:table-cell>
                                         <fo:table-cell padding="3pt" border="0.5pt solid black" text-align="center">
-                                            <fo:block>
-                                                <xsl:value-of select="@note"/>
-                                            </fo:block>
+                                            <xsl:value-of select="@note"/>
                                         </fo:table-cell>
-                                        <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                            <fo:block>&#160;</fo:block>
-                                        </fo:table-cell>
-                                        <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                            <fo:block>&#160;</fo:block>
-                                        </fo:table-cell>
-                                        <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                            <fo:block>&#160;</fo:block>
-                                        </fo:table-cell>
+                                        <fo:table-cell padding="3pt" border="0.5pt solid black">&#160;</fo:table-cell>
+                                        <fo:table-cell padding="3pt" border="0.5pt solid black">&#160;</fo:table-cell>
+                                        <fo:table-cell padding="3pt" border="0.5pt solid black">&#160;</fo:table-cell>
                                     </fo:table-row>
                                 </xsl:for-each>
                             </xsl:for-each>
