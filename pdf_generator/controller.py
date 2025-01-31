@@ -59,4 +59,62 @@ def generate_releve_pdf():
     return pdf_file
 
 
-generate_releve_pdf()
+import subprocess
+import os
+
+import subprocess
+import os
+
+
+def generate_student_card(xml_path, xslfo_path, output_dir, fop_path="fop"):
+    """
+    Génère un fichier PDF dans un répertoire spécifique.
+
+    :param xml_path: Chemin du fichier XML contenant les données de l'étudiant.
+    :param xslfo_path: Chemin du fichier XSL-FO pour la mise en page.
+    :param output_dir: Répertoire où enregistrer le PDF.
+    :param fop_path: Chemin du dossier contenant fop.bat (défaut = "fop").
+    :return: Chemin absolu du fichier PDF généré.
+    """
+    # Vérifier si le répertoire de sortie existe, sinon le créer
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Construire le chemin du fichier de sortie
+    output_pdf = os.path.join(output_dir, "Student_Card.pdf")
+
+    # Construire le chemin de fop.bat
+    fop_path = os.path.abspath("../fop")
+    fop_executable = os.path.join(fop_path, "fop.bat")
+
+    # Vérifier si fop.bat existe
+    if not os.path.exists(fop_executable):
+        raise FileNotFoundError(f"Le fichier {fop_executable} n'existe pas. Vérifiez le chemin.")
+
+    # Construire la commande pour exécuter FOP
+    command = [fop_executable, "-xml", xml_path, "-xsl", xslfo_path, "-pdf", output_pdf]
+
+    try:
+        # Exécuter la commande pour générer le PDF
+        subprocess.run(command, check=True, shell=True)
+        print(f"✅ PDF généré avec succès : {output_pdf}")
+        return os.path.abspath(output_pdf)
+
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Erreur lors de la génération du PDF : {e}")
+        return None
+
+
+# 📌 Exemple d'utilisation
+output_directory = "result"  # Dossier où stocker les PDFs
+
+generate_student_card(
+    xml_path="students/StudentExtracted.xml",
+    xslfo_path="students/student_card.fo",
+    output_dir=output_directory,  # Spécifier le répertoire de sortie
+    fop_path="fop"
+)
+
+
+
+
+
