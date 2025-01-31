@@ -1,0 +1,61 @@
+<student CNE="20007896">
+    <FirstName>ANASS</FirstName>
+    <LastName>EL OUAHABI</LastName>
+    <notes>
+      <module code="GINF31" name="Programmation Orientée objet &amp; XML" note="13.5">
+        <sous_module code="GINF311" name="Programmation Orientée Objet : java" note="14.5"/>
+        <sous_module code="GINF312" name="xml &amp; applications" note="12.5"/>
+      </module>
+      <module code="GINF32" name="Qualité &amp; approche processus" note="15.21">
+        <sous_module code="GINF321" name="Assurance controle qualité (ISO 9001)" note="17.21"/>
+        <sous_module code="GINF322" name="Cycle de vie logiciel et méthodes agiles" note="14.21"/>
+        <sous_module code="GINF323" name="Maitrise et optimisation des processus" note="14.21"/>
+      </module>
+      <module code="GINF33" name="Modélisation orientée objet et IHM" note="12.96">
+        <sous_module code="GINF331" name="Modélisation orientée objet UML" note="13.96"/>
+        <sous_module code="GINF332" name="Interaction homme machine" note="11.96"/>
+      </module>
+      <module code="GINF34" name="Bases de données avancées I" note="13.22">
+        <sous_module code="GINF341" name="Optimisation et qualité des bases de données" note="15.22"/>
+        <sous_module code="GINF342" name="Administration et sécurité des bases de données" note="12.22"/>
+        <sous_module code="GINF343" name="Base de données NoSQL" note="12.22"/>
+      </module>
+      <module code="GINF35" name="Administration et programmation système" note="14.38">
+        <sous_module code="GINF351" name="Administration système" note="15.38"/>
+        <sous_module code="GINF352" name="Programmation système" note="13.38"/>
+      </module>
+      <module code="GINF36" name="Langues et communication 2" note="16.5">
+        <sous_module code="GINF361" name="Espagnol II" note="18.5"/>
+        <sous_module code="GINF362" name="Anglais professionnel" note="15.5"/>
+        <sous_module code="GINF363" name="Techniques de communication" note="15.5"/>
+      </module>
+      <module code="GINF41" name="Technologies distribuées" note="12.0">
+        <sous_module code="GINF411" name="Introduction à J2EE" note="13.0"/>
+        <sous_module code="GINF412" name="Programmation en C#" note="11.0"/>
+      </module>
+      <module code="GINF42" name="Bases de données avancées II &amp; cloud" note="12.0">
+        <sous_module code="GINF421" name="Gestion des données complexes" note="14.0"/>
+        <sous_module code="GINF422" name="Gestion des données distribuées" note="11.0"/>
+        <sous_module code="GINF423" name="Cloud computing et infogérance" note="11.0"/>
+      </module>
+      <module code="GINF43" name="Traitement d'image" note="12.02">
+        <sous_module code="GINF431" name="Traitement de l'image" note="14.02"/>
+        <sous_module code="GINF432" name="Vision numérique" note="11.02"/>
+        <sous_module code="GINF433" name="Processus stochastique" note="11.02"/>
+      </module>
+      <module code="GINF44" name="Programmation déclarative et TAV" note="12.0">
+        <sous_module code="GINF441" name="Programmation déclarative" note="13.0"/>
+        <sous_module code="GINF442" name="Technique algorithmique avancée" note="11.0"/>
+      </module>
+      <module code="GINF45" name="Sécurité et cryptographie" note="16.02">
+        <sous_module code="GINF451" name="Sécurité des systèmes" note="17.02"/>
+        <sous_module code="GINF452" name="Cryptographie" note="15.02"/>
+      </module>
+      <module code="GINF46" name="Management de l'entreprise 2" note="13.23">
+        <sous_module code="GINF461" name="Économie &amp; comptabilité 2" note="15.23"/>
+        <sous_module code="GINF462" name="Projets collectifs &amp; stages" note="12.23"/>
+        <sous_module code="GINF463" name="Management de projet" note="12.23"/>
+      </module>
+    </notes>
+    <moyenne>13.59</moyenne>
+  </student>

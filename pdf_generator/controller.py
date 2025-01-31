@@ -10,14 +10,14 @@ except:
     PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 
-def generate_releve_pdf(xml,fo):
+def generate_releve_pdf(xml,fo,pdf_filename):
     print(f"📂 Using project root: {PROJECT_ROOT}")
 
     fop_home = os.path.join(PROJECT_ROOT, "fop")
     xml_file = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note", xml)
     xslt_file = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note", fo)
-    pdf_output_dir = os.path.join(PROJECT_ROOT, "pdf_generator", "result")
-    pdf_file = os.path.join(pdf_output_dir, "releve_notes.pdf")
+    pdf_output_dir = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note")
+    pdf_file = os.path.join(pdf_output_dir, pdf_filename)
 
     os.makedirs(pdf_output_dir, exist_ok=True)
 
@@ -139,7 +139,7 @@ def find_student_by_cne(CNE):
             file.write(student_xml)
 
         print(f"✅ Student XML saved at: {output_path}")
-        return output_path
+        return output_filename
 
     except ET.ParseError as e:
         print(f"❌ XML Parsing Error: {e}")
@@ -149,4 +149,4 @@ def find_student_by_cne(CNE):
 # find_student_by_cne("21010395")
 
 # generate_releve_pdf()
-generate_releve_pdf("releve_note_ABDELOUAHED_ABBAD.xml","Releve_de_Notes.xsl")
+# generate_releve_pdf("releve_note_ABDELOUAHED_ABBAD.xml","Releve_de_Notes.xsl")

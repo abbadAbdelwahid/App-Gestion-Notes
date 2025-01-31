@@ -1,150 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:output method="xml" indent="yes"/>
 
-    <xsl:template match="/student">
-        <fo:root>
+    <xsl:template match="/">
+        <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+
+            <!-- Page Layout -->
             <fo:layout-master-set>
-                <fo:simple-page-master master-name="A4" page-height="29.7cm" page-width="21cm" margin="1cm">
-                    <fo:region-body margin-top="2cm" />
-                    <fo:region-before extent="2cm" />
-                    <fo:region-after extent="1.5cm" />
+                <fo:simple-page-master master-name="A4" page-height="29.7cm" page-width="21cm" margin="1.1cm">
+                    <fo:region-body margin-top="1.4cm" margin-bottom="1.2cm"/>
+                    <fo:region-before extent="1cm"/>
+                    <fo:region-after extent="1cm"/>
                 </fo:simple-page-master>
             </fo:layout-master-set>
 
             <fo:page-sequence master-reference="A4">
-                <fo:flow flow-name="xsl-region-body">
 
-                    <!-- HEADER -->
-                    <fo:table table-layout="fixed">
-                        <fo:table-column column-width="5cm"/>
-                        <fo:table-column column-width="10cm"/>
-                        <fo:table-column column-width="5cm"/>
-                        <fo:table-body>
-                            <fo:table-row>
-                                <fo:table-cell>
-                                    <fo:block>
-                                        <fo:external-graphic src="logoUae.png" width="2.7cm" height="3.0cm"/>
-                                    </fo:block>
-                                </fo:table-cell>
-                                <fo:table-cell>
-                                    <fo:block text-align="center" font-size="16pt" font-weight="bold" color="#003366">
-                                        Relevé de Notes de <xsl:value-of select="FirstName"/> <xsl:value-of select="LastName"/>
-                                    </fo:block>
-                                    <fo:block text-align="center" font-size="12pt" font-weight="bold" color="#666">
-                                        CNE: <xsl:value-of select="@CNE"/>
-                                    </fo:block>
-                                </fo:table-cell>
-                                <fo:table-cell>
-                                    <fo:block>
-                                        <fo:external-graphic src="ensa.png" width="4.3cm" height="2.5cm"/>
-                                    </fo:block>
-                                </fo:table-cell>
-                            </fo:table-row>
-                        </fo:table-body>
-                    </fo:table>
-
-                    <fo:block space-before="10pt"/>
-
-                    <!-- TABLE -->
-                    <fo:table border="0.5pt solid black" table-layout="fixed" width="100%">
-                        <fo:table-column column-width="15%"/>
-                        <fo:table-column column-width="30%"/>
-                        <fo:table-column column-width="10%"/>
-                        <fo:table-column column-width="10%"/>
-                        <fo:table-column column-width="25%"/>
-                        <fo:table-column column-width="10%"/>
-
-                        <!-- Table Header -->
-                        <fo:table-header>
-                            <fo:table-row background-color="#003366" color="white" font-size="8pt" font-weight="bold">
-                                <fo:table-cell padding="3pt"><fo:block>Code Module</fo:block></fo:table-cell>
-                                <fo:table-cell padding="3pt"><fo:block>Designation Module</fo:block></fo:table-cell>
-                                <fo:table-cell padding="3pt"><fo:block>Note / 20</fo:block></fo:table-cell>
-                                <fo:table-cell padding="3pt"><fo:block>Année Universitaire</fo:block></fo:table-cell>
-                                <fo:table-cell padding="3pt"><fo:block>Designation Matière</fo:block></fo:table-cell>
-                                <fo:table-cell padding="3pt"><fo:block>Note / 20</fo:block></fo:table-cell>
-                            </fo:table-row>
-                        </fo:table-header>
-
-                        <fo:table-body>
-                            <xsl:for-each select="notes/module">
-                                <fo:table-row background-color="#f5f5f5" font-size="8pt">
-                                    <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                        <fo:block font-weight="bold">
-                                            <xsl:value-of select="@code"/>
-                                        </fo:block>
-                                    </fo:table-cell>
-                                    <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                        <fo:block font-weight="bold">
-                                            <xsl:value-of select="@name"/>
-                                        </fo:block>
-                                    </fo:table-cell>
-                                    <fo:table-cell padding="3pt" border="0.5pt solid black" text-align="center">
-                                        <fo:block>
-                                            <xsl:value-of select="@note"/>
-                                        </fo:block>
-                                    </fo:table-cell>
-                                    <fo:table-cell padding="3pt" border="0.5pt solid black" text-align="center">
-                                        <fo:block>2024/2025</fo:block>
-                                    </fo:table-cell>
-                                    <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                        <fo:block>&#160;</fo:block> <!-- Prevent Empty Cells -->
-                                    </fo:table-cell>
-                                    <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                        <fo:block>&#160;</fo:block>
-                                    </fo:table-cell>
-                                </fo:table-row>
-
-                                <!-- Sous-modules -->
-                                <xsl:for-each select="sous_module">
-                                    <fo:table-row font-size="8pt">
-                                        <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                            <fo:block>&#160;</fo:block>
-                                        </fo:table-cell>
-                                        <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                            <fo:block>
-                                                <xsl:value-of select="@name"/>
-                                            </fo:block>
-                                        </fo:table-cell>
-                                        <fo:table-cell padding="3pt" border="0.5pt solid black" text-align="center">
-                                            <fo:block>
-                                                <xsl:value-of select="@note"/>
-                                            </fo:block>
-                                        </fo:table-cell>
-                                        <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                            <fo:block>&#160;</fo:block>
-                                        </fo:table-cell>
-                                        <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                            <fo:block>&#160;</fo:block>
-                                        </fo:table-cell>
-                                        <fo:table-cell padding="3pt" border="0.5pt solid black">
-                                            <fo:block>&#160;</fo:block>
-                                        </fo:table-cell>
-                                    </fo:table-row>
-                                </xsl:for-each>
-                            </xsl:for-each>
-                        </fo:table-body>
-                    </fo:table>
-
-                    <!-- Footer with Average -->
-                    <fo:block text-align="right" font-size="10pt" font-weight="bold" space-before="15pt">
-                        Moyenne Générale : <xsl:value-of select="moyenne"/>
+                <!-- Static Content (Header) -->
+                <fo:static-content flow-name="xsl-region-before">
+                    <fo:block font-size="11pt" font-weight="bold" text-transform="uppercase" letter-spacing="0.7pt" text-align="center" padding="2pt" border-bottom="0.5pt solid black" font-family="Arial">
+                        Relevé de note de <xsl:value-of select="student/FirstName"/> <xsl:text> </xsl:text>
+                        <xsl:value-of select="student/LastName"/> (CNE: <xsl:value-of select="student/@CNE"/>)
                     </fo:block>
-                    <fo:block text-align="right" font-size="10pt" font-weight="bold">
+                </fo:static-content>
+
+                <!-- Static Content (Footer) -->
+                <fo:static-content flow-name="xsl-region-after">
+                    <fo:block font-size="11pt" font-weight="bold" text-align="center" font-family="Arial">
+                        Moyenne Générale: <xsl:value-of select="student/moyenne"/> -
                         <xsl:choose>
-                            <xsl:when test="moyenne &gt;= 12">
-                                <fo:inline color="green">ADM</fo:inline>
+                            <xsl:when test="student/moyenne &gt;= 12">
+                                <fo:inline color="green">Admis</fo:inline>
                             </xsl:when>
                             <xsl:otherwise>
-                                <fo:inline color="red">NON ADM</fo:inline>
+                                <fo:inline color="red">Non Admis</fo:inline>
                             </xsl:otherwise>
                         </xsl:choose>
                     </fo:block>
+                </fo:static-content>
+
+                <fo:flow flow-name="xsl-region-body">
+                    <fo:block space-before="10pt" space-after="10pt">
+
+                        <!-- Table for Notes -->
+                        <fo:table border="0.3pt solid #4A4A4A" width="100%" table-layout="fixed" font-size="9.3pt" font-family="Arial">
+                            <fo:table-column column-width="15%"/>
+                            <fo:table-column column-width="25%"/>
+                            <fo:table-column column-width="10%"/>
+                            <fo:table-column column-width="15%"/>
+                            <fo:table-column column-width="20%"/>
+                            <fo:table-column column-width="15%"/>
+
+                            <fo:table-header>
+                                <fo:table-row font-weight="bold" background-color="#1B1F3B" color="white">
+                                    <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block>Code Module</fo:block></fo:table-cell>
+                                    <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block>Désignation Module</fo:block></fo:table-cell>
+                                    <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block>Note/20</fo:block></fo:table-cell>
+                                    <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block>Année Universitaire</fo:block></fo:table-cell>
+                                    <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block>Désignation Matière</fo:block></fo:table-cell>
+                                    <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block>Note Matière</fo:block></fo:table-cell>
+                                </fo:table-row>
+                            </fo:table-header>
+
+                            <fo:table-body>
+                                <xsl:for-each select="student/notes/module">
+                                    <fo:table-row>
+                                        <xsl:attribute name="background-color">
+                                            <xsl:choose>
+                                                <xsl:when test="position() mod 2 = 1">#ECF2FF</xsl:when>
+                                                <xsl:otherwise>#FFE8C6</xsl:otherwise>
+                                            </xsl:choose>
+                                        </xsl:attribute>
+                                        <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block><xsl:value-of select="@code"/></fo:block></fo:table-cell>
+                                        <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block><xsl:value-of select="@name"/></fo:block></fo:table-cell>
+                                        <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block><xsl:value-of select="@note"/></fo:block></fo:table-cell>
+                                        <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block>2024/2025</fo:block></fo:table-cell>
+                                        <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block/></fo:table-cell>
+                                        <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block/></fo:table-cell>
+                                    </fo:table-row>
+                                    <xsl:for-each select="sous_module">
+                                        <fo:table-row>
+                                            <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block/></fo:table-cell>
+                                            <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block/></fo:table-cell>
+                                            <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block/></fo:table-cell>
+                                            <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block/></fo:table-cell>
+                                            <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block><xsl:value-of select="@name"/></fo:block></fo:table-cell>
+                                            <fo:table-cell border="0.3pt solid #4A4A4A"><fo:block><xsl:value-of select="@note"/></fo:block></fo:table-cell>
+                                        </fo:table-row>
+                                    </xsl:for-each>
+                                </xsl:for-each>
+                            </fo:table-body>
+                        </fo:table>
+                    </fo:block>
                 </fo:flow>
+
             </fo:page-sequence>
         </fo:root>
     </xsl:template>
-
 </xsl:stylesheet>
