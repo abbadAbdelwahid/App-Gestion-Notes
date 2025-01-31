@@ -1,0 +1,109 @@
+<semaine annee="2025" num="25">
+    <lundi date="10/03">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>BASES DE DONNEES N</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>BASES DE DONNEES N</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="11/03">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>CHAFIK</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>CHAFIK</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </mardi>
+    <mercredi date="12/03">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>TRAITEMENT D'IMAGE</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>TRAITEMENT D'IMAGE</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>MANAGEMENT DE PROJET</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>MANAGEMENT DE PROJET</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="13/03">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="14/03">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>GESTION DES DONNEES</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>GESTION DES DONNEES</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="14h30" fin="16h00" type="CM">
+            <module>COMPTABILITE 2</module>
+            <Professeur>NAITBOUBKER</Professeur>
+            <salle>SALLE B2</salle>
+        </seance>
+        <seance debut="16h30" fin="18h00" type="CM">
+            <module>COMPTABILITE 2</module>
+            <Professeur>NAITBOUBKER</Professeur>
+            <salle>SALLE B2</salle>
+        </seance>
+    </vendredi>
+    <samedi date="15/03">
+    </samedi>
+</semaine>

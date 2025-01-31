@@ -10,13 +10,13 @@ except:
     PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 
-def generate_releve_pdf(xml,fo,pdf_filename):
+def generate_pdf(xml, fo, file_type, pdf_filename):
     print(f"📂 Using project root: {PROJECT_ROOT}")
 
     fop_home = os.path.join(PROJECT_ROOT, "fop")
-    xml_file = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note", xml)
-    xslt_file = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note", fo)
-    pdf_output_dir = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note")
+    xml_file = os.path.join(PROJECT_ROOT, "Xml_files", file_type, xml)
+    xslt_file = os.path.join(PROJECT_ROOT, "Xml_files", file_type, fo)
+    pdf_output_dir = os.path.join(PROJECT_ROOT, "Xml_files", file_type)
     pdf_file = os.path.join(pdf_output_dir, pdf_filename)
 
     os.makedirs(pdf_output_dir, exist_ok=True)
@@ -150,3 +150,125 @@ def find_student_by_cne(CNE):
 
 # generate_releve_pdf()
 # generate_releve_pdf("releve_note_ABDELOUAHED_ABBAD.xml","Releve_de_Notes.xsl")
+
+
+
+def find_semaine_by_num(num):
+    """Runs an XQuery script inline in BaseX to extract a semaine by num and saves it to an XML file."""
+
+    # Get the absolute path to the project root
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
+    # Define BaseX executable path
+    basex_path = os.path.join(project_root, "BaseX", "bin", "basex.bat")  # Windows
+    if not os.path.exists(basex_path):
+        basex_path = os.path.join(project_root, "BaseX", "bin", "basex")  # Linux/macOS
+
+    # Ensure BaseX executable exists
+    if not os.path.exists(basex_path):
+        print(f"❌ ERROR: BaseX executable not found at {basex_path}")
+        return
+
+    print(f"🔍 Running BaseX from: {basex_path}")
+
+    # Paths for XML file
+    xml_file = os.path.join(project_root, "Xml_files", "edt", "edt_24_weeks.xml").replace("\\", "/")
+    output_dir = os.path.join(project_root, "Xml_files", "edt")
+
+    # Ensure XML file exists
+    if not os.path.exists(xml_file):
+        print(f"❌ ERROR: File not found: {xml_file}")
+        return
+
+    # Ensure output directory exists
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    # XQuery to extract the semaine with the specified num
+    xquery_inline = (
+        'declare option output:method "xml"; '
+        'declare option output:encoding "UTF-8"; '
+        f'for $semaine in doc("{xml_file}")//semaine[@num="{num}"] return $semaine'
+    )
+
+    # Construct BaseX command
+    command = [basex_path, "-q", xquery_inline]
+
+    print(f"🔍 Running command: {' '.join(command)}")
+
+    # Run BaseX XQuery
+    result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding="utf-8")
+
+    if result.stderr:
+        print(f"❌ ERROR: {result.stderr}")
+        return
+
+    semaine_xml = clean_xml_content(result.stdout.strip())
+
+    if not semaine_xml:
+        print(f"⚠️ No semaine found with num: {num}")
+        return
+
+    # Generate output file path
+    output_filename = f"edt_week_{num}.xml"
+    output_path = os.path.join(output_dir, output_filename)
+
+    # Save extracted XML with proper UTF-8 encoding
+    with open(output_path, "w", encoding="utf-8") as file:
+        file.write(semaine_xml)
+
+    print(f"✅ Semaine XML saved at: {output_path}")
+    return output_filename
+
+# find_semaine_by_num(25)
+
+# def generate_edt_pdf(xml,fo,pdf_filename):
+#     print(f"📂 Using project root: {PROJECT_ROOT}")
+#
+#     fop_home = os.path.join(PROJECT_ROOT, "fop")
+#     xml_file = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note", xml)
+#     xslt_file = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note", fo)
+#     pdf_output_dir = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note")
+#     pdf_file = os.path.join(pdf_output_dir, pdf_filename)
+#
+#     os.makedirs(pdf_output_dir, exist_ok=True)
+#
+#     # Ensure Apache FOP exists
+#     if not os.path.exists(fop_home):
+#         print(f"❌ ERROR: Apache FOP not found at {fop_home}")
+#         return
+#
+#     # Ensure required XML and XSLT files exist
+#     for file in [xml_file, xslt_file]:
+#         if not os.path.exists(file):
+#             print(f"❌ ERROR: Missing file: {file}")
+#             return
+#
+#     # Build classpath with BOTH `lib/` and `build/`
+#     lib_dir = os.path.join(fop_home, "lib")
+#     build_dir = os.path.join(fop_home, "build")
+#
+#     jar_files = []
+#
+#     # Add JARs from lib/
+#     if os.path.exists(lib_dir):
+#         jar_files += [os.path.join(lib_dir, jar) for jar in os.listdir(lib_dir) if jar.endswith(".jar")]
+#
+#     # Add JARs from build/
+#     if os.path.exists(build_dir):
+#         jar_files += [os.path.join(build_dir, jar) for jar in os.listdir(build_dir) if jar.endswith(".jar")]
+#
+#     classpath = ";".join(jar_files)  # Use `;` for Windows, `:` for Linux/macOS
+#
+#     # Apache FOP Command
+#     fop_command = f'java -cp "{classpath}" org.apache.fop.cli.Main -xml "{xml_file}" -xsl "{xslt_file}" -pdf "{pdf_file}"'
+#
+#     try:
+#         subprocess.run(fop_command, shell=True, check=True)
+#         print(f"✅ PDF successfully generated: {pdf_file}")
+#     except subprocess.CalledProcessError as e:
+#         print(f"❌ ERROR: PDF generation failed: {e}")
+#
+#     return pdf_file
+
+# generate_pdf("edt_week_25.xml","edt.xsl","edt","edt_week_25.pdf")
