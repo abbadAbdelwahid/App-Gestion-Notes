@@ -8,6 +8,3 @@ path('groupes/tp/', generate_TpGroupes, name='generate_TpGroupes'),
     path('edt/<int:week_number>/', generate_edt, name='generate_edt'),
 ]
 
-# /pdfs/attestation/reussite/<int:CNE>/
-# /pdfs/attestation/scolarite/<int:CNE>/
-# /pdfs/attestation/carte/etudiant/<int:CNE>/
