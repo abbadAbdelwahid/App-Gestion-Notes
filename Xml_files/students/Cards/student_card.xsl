@@ -12,7 +12,7 @@
 
             <fo:page-sequence master-reference="card">
                 <fo:flow flow-name="xsl-region-body">
-                    <xsl:apply-templates select="Students/Student"/>
+                    <xsl:apply-templates select="Student"/>
                 </fo:flow>
             </fo:page-sequence>
         </fo:root>
@@ -64,12 +64,17 @@
 
                 <fo:table-body>
                     <fo:table-row>
-                        <!-- Photo -->
+                        <!-- Photo de l'étudiant -->
                         <fo:table-cell>
                             <fo:block>
-                                <xsl:if test="Photo != ''">
-                                    <fo:external-graphic src="{Photo}" content-width="40mm" content-height="50mm"/>
-                                </xsl:if>
+                                <xsl:choose>
+                                    <xsl:when test="photo and photo != ''">
+                                        <fo:external-graphic src="{photo}" content-width="40mm" content-height="50mm"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <fo:block font-size="10pt" color="red">Photo non disponible</fo:block>
+                                    </xsl:otherwise>
+                                </xsl:choose>
                             </fo:block>
                         </fo:table-cell>
 
@@ -82,7 +87,7 @@
                                 <xsl:value-of select="FirstName"/>
                             </fo:block>
                             <fo:block font-size="12pt" font-weight="bold">
-                                <xsl:value-of select="CNE"/>
+                                <xsl:value-of select="@CNE"/>
                             </fo:block>
                         </fo:table-cell>
                     </fo:table-row>
@@ -95,4 +100,5 @@
             </fo:block>
         </fo:block>
     </xsl:template>
+
 </xsl:stylesheet>

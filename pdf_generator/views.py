@@ -24,3 +24,13 @@ def generate_edt(request, week_number):
     generate_pdf(output_filename, "edt.xsl", "edt", pdf_filename)
     pdf_path = os.path.join(settings.BASE_DIR, "Xml_files", "edt", pdf_filename)
     return FileResponse(open(pdf_path, "rb"), as_attachment=True, filename=pdf_filename)
+
+def generate_Student_Card(request, CNE):
+
+    output_filename = extract_student_by_cne(CNE)
+    pdf_filename = str(Path(output_filename).with_suffix(".pdf"))
+    generate_pdf(output_filename, "", "releve_note", pdf_filename)
+    pdf_path = os.path.join(settings.BASE_DIR, "Xml_files", "students","Cards", pdf_filename)
+    response = FileResponse(open(pdf_path, "rb"), as_attachment=True, filename=pdf_filename)
+
+    return response
