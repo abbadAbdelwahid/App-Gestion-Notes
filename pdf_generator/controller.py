@@ -1,16 +1,5 @@
 
 import os
-import django
-
-# Définir le module des paramètres Django
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "..\App-Gestion-Notes\App_Gestion_Note.settings")  # Remplace par le bon module
-
-# Initialiser Django
-django.setup()
-
-from django.conf import settings
-
-import os
 import subprocess
 import xml.etree.ElementTree as ET
 try:
@@ -19,6 +8,7 @@ try:
     PROJECT_ROOT = settings.BASE_DIR
 except:
     PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
 
 
 def generate_pdf(xml, fo, file_type, pdf_filename):
@@ -69,7 +59,6 @@ def generate_pdf(xml, fo, file_type, pdf_filename):
         print(f"❌ ERROR: PDF generation failed: {e}")
 
     return pdf_file
-
 
 
 
@@ -157,100 +146,161 @@ def find_student_by_cne(CNE):
         return
 
 def extract_student_by_cne(CNE):
-    """Extrait un étudiant spécifique de Students_GINF2.xml et enregistre un fichier XML séparé."""
+        """Extrait un étudiant spécifique de Students_GINF2.xml et enregistre un fichier XML séparé."""
 
-    # Définir les chemins des fichiers
+        # Définir les chemins des fichiers
+        project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+        xml_file = os.path.join(project_root, "Xml_files", "students", "Students_GINF2.xml").replace("\\", "/")
+        output_dir = os.path.join(project_root, "Xml_files", "students", "ExtractedStudents")
+
+        # Vérifier l'existence du fichier principal
+        if not os.path.exists(xml_file):
+            print(f"❌ ERROR: File not found: {xml_file}")
+            return None
+
+        # Assurer l'existence du dossier de sortie
+        os.makedirs(output_dir, exist_ok=True)
+
+        # Définir le script XQuery pour extraire l'étudiant par CNE
+        xquery_inline = (
+            'declare option output:method "xml"; '
+            'declare option output:encoding "UTF-8"; '
+            f'for $student in doc("{xml_file}")//Student[@CNE="{CNE}"] return $student'
+        )
+        xquery_inline = (
+            'declare option output:method "xml"; '
+            'declare option output:encoding "UTF-8"; '
+            f'for $student in doc("{xml_file}")//Student[@CNE="{CNE}"] return $student'
+        )
+
+        # Définir le chemin de BaseX
+        basex_path = os.path.join(project_root, "BaseX", "bin", "basex.bat")  # Windows
+        if not os.path.exists(basex_path):
+            basex_path = os.path.join(project_root, "BaseX", "bin", "basex")  # Linux/macOS
+
+        # Vérifier l'existence de BaseX
+        if not os.path.exists(basex_path):
+            print(f"❌ ERROR: BaseX executable not found at {basex_path}")
+            return None
+
+        print(f"🔍 Running BaseX from: {basex_path}")
+
+        # Exécuter la requête XQuery via BaseX
+        command = [basex_path, "-q", xquery_inline]
+        print(f"🔍 Running command: {' '.join(command)}")
+
+        try:
+            result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+            if result.returncode != 0:
+                print(f"❌ ERROR: BaseX command failed with return code {result.returncode}")
+                print(f"🛑 STDERR: {result.stderr}")
+                return None
+
+            student_xml = result.stdout.strip()
+
+            if not student_xml:
+                print(f"⚠️ No student found with CNE: {CNE}")
+                return None
+
+
+            print(f"✅ Extracted XML: \n{student_xml}")
+
+            # Parser l'XML pour récupérer les informations
+            try:
+                root = ET.fromstring(student_xml)
+
+                first_name = root.find("first_name").text if root.find("first_name") is not None else "Unknown"
+                last_name = root.find("last_name").text if root.find("last_name") is not None else "Unknown"
+
+                # Générer le chemin du fichier de sortie
+                output_filename = f"student_{CNE}_{first_name}_{last_name}.xml"
+                output_path = os.path.join(output_dir, output_filename)
+
+                # Sauvegarde du fichier XML
+                with open(output_path, "w", encoding="utf-8") as file:
+                    file.write(student_xml)
+
+                print(f"✅ Student XML saved at: {output_path}")
+                return output_path
+
+            except ET.ParseError as e:
+                print(f"❌ XML Parsing Error: {e}")
+                return None
+
+        except Exception as e:
+            print(f"❌ Unexpected error: {e}")
+            return None
+
+# Example usage
+# find_student_by_cne("21010395")
+
+# generate_releve_pdf()
+# generate_releve_pdf("releve_note_ABDELOUAHED_ABBAD.xml","Releve_de_Notes.xsl")
+
+def find_semaine_by_num(num):
+    """Runs an XQuery script inline in BaseX to extract a semaine by num and saves it to an XML file."""
+
+    # Get the absolute path to the project root
     project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    xml_file = os.path.join(project_root, "Xml_files", "students", "Students_GINF2.xml").replace("\\", "/")
-    output_dir = os.path.join(project_root, "Xml_files", "students", "ExtractedStudents")
 
-    # Vérifier l'existence du fichier principal
-    if not os.path.exists(xml_file):
-        print(f"❌ ERROR: File not found: {xml_file}")
-        return None
-
-    # Assurer l'existence du dossier de sortie
-    os.makedirs(output_dir, exist_ok=True)
-
-    # Définir le script XQuery pour extraire l'étudiant par CNE
-    xquery_inline = (
-        'declare option output:method "xml"; '
-        'declare option output:encoding "UTF-8"; '
-        f'for $student in doc("{xml_file}")//Student[@CNE="{CNE}"] return $student'
-    )
-    xquery_inline = (
-        'declare option output:method "xml"; '
-        'declare option output:encoding "UTF-8"; '
-        f'for $student in doc("{xml_file}")//Student[@CNE="{CNE}"] return $student'
-    )
-
-    # Définir le chemin de BaseX
+    # Define BaseX executable path
     basex_path = os.path.join(project_root, "BaseX", "bin", "basex.bat")  # Windows
     if not os.path.exists(basex_path):
         basex_path = os.path.join(project_root, "BaseX", "bin", "basex")  # Linux/macOS
 
-    # Vérifier l'existence de BaseX
+    # Ensure BaseX executable exists
     if not os.path.exists(basex_path):
         print(f"❌ ERROR: BaseX executable not found at {basex_path}")
-        return None
+        return
 
     print(f"🔍 Running BaseX from: {basex_path}")
 
-    # Exécuter la requête XQuery via BaseX
+    # Paths for XML file
+    xml_file = os.path.join(project_root, "Xml_files", "edt", "edt_24_weeks.xml").replace("\\", "/")
+    output_dir = os.path.join(project_root, "Xml_files", "edt")
+
+    # Ensure XML file exists
+    if not os.path.exists(xml_file):
+        print(f"❌ ERROR: File not found: {xml_file}")
+        return
+
+    # Ensure output directory exists
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    # XQuery to extract the semaine with the specified num
+    xquery_inline = (
+        'declare option output:method "xml"; '
+        'declare option output:encoding "UTF-8"; '
+        f'for $semaine in doc("{xml_file}")//semaine[@num="{num}"] return $semaine'
+    )
+
+    # Construct BaseX command
     command = [basex_path, "-q", xquery_inline]
+
     print(f"🔍 Running command: {' '.join(command)}")
 
-    try:
-        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    # Run BaseX XQuery
+    result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding="utf-8")
 
-        if result.returncode != 0:
-            print(f"❌ ERROR: BaseX command failed with return code {result.returncode}")
-            print(f"🛑 STDERR: {result.stderr}")
-            return None
+    if result.stderr:
+        print(f"❌ ERROR: {result.stderr}")
+        return
 
-        student_xml = result.stdout.strip()
+    semaine_xml = clean_xml_content(result.stdout.strip())
 
-        if not student_xml:
-            print(f"⚠️ No student found with CNE: {CNE}")
-            return None
+    if not semaine_xml:
+        print(f"⚠️ No semaine found with num: {num}")
+        return
 
+    # Generate output file path
+    output_filename = f"edt_week_{num}.xml"
+    output_path = os.path.join(output_dir, output_filename)
 
-        print(f"✅ Extracted XML: \n{student_xml}")
+    # Save extracted XML with proper UTF-8 encoding
+    with open(output_path, "w", encoding="utf-8") as file:
+        file.write(semaine_xml)
 
-        # Parser l'XML pour récupérer les informations
-        try:
-            root = ET.fromstring(student_xml)
-
-            first_name = root.find("first_name").text if root.find("first_name") is not None else "Unknown"
-            last_name = root.find("last_name").text if root.find("last_name") is not None else "Unknown"
-
-            # Générer le chemin du fichier de sortie
-            output_filename = f"student_{CNE}_{first_name}_{last_name}.xml"
-            output_path = os.path.join(output_dir, output_filename)
-
-            # Sauvegarde du fichier XML
-            with open(output_path, "w", encoding="utf-8") as file:
-                file.write(student_xml)
-
-            print(f"✅ Student XML saved at: {output_path}")
-            return output_path
-
-        except ET.ParseError as e:
-            print(f"❌ XML Parsing Error: {e}")
-            return None
-
-    except Exception as e:
-        print(f"❌ Unexpected error: {e}")
-        return None
-
-    import django
-    django.setup()
-    from django.conf import settings
-    print(settings.BASE_DIR)
-
-# Example usage
-
-generate_student_card_pdf(21010261)
-
-# generate_releve_pdf()
-# generate_releve_pdf("releve_note_ABDELOUAHED_ABBAD.xml","Releve_de_Notes.xsl")
+    print(f"✅ Semaine XML saved at: {output_path}")
+    return output_filename

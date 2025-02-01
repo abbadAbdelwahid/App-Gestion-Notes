@@ -1,0 +1,109 @@
+<semaine annee="2024" num="1">
+    <lundi date="23/09">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="24/09">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mardi>
+    <mercredi date="25/09">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="26/09">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ESPAGNOL</module>
+            <Professeur>LAAMARTI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="27/09">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="14h30" fin="16h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="16h30" fin="18h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="28/09">
+    </samedi>
+</semaine>

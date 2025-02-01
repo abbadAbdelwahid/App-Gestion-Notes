@@ -1,0 +1,2161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semaines>
+<semaine annee="2024" num="1">
+    <lundi date="23/09">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="24/09">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mardi>
+    <mercredi date="25/09">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="26/09">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ESPAGNOL</module>
+            <Professeur>LAAMARTI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="27/09">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="14h30" fin="16h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="16h30" fin="18h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="28/09">
+    </samedi>
+</semaine>
+
+
+<semaine annee="2024" num="2">
+    <lundi date="30/09">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="01/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mardi>
+    <mercredi date="02/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="03/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ESPAGNOL</module>
+            <Professeur>LAAMARTI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="04/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="14h30" fin="16h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="16h30" fin="18h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="05/10">
+    </samedi>
+</semaine>
+
+
+<semaine annee="2024" num="3">
+    <lundi date="07/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="08/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mardi>
+    <mercredi date="09/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="10/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ESPAGNOL</module>
+            <Professeur>LAAMARTI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="11/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="14h30" fin="16h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="16h30" fin="18h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="12/10">
+    </samedi>
+</semaine>
+
+
+<semaine annee="2024" num="4">
+    <lundi date="14/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="15/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mardi>
+    <mercredi date="16/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="17/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ESPAGNOL</module>
+            <Professeur>LAAMARTI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="18/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="14h30" fin="16h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="16h30" fin="18h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="19/10">
+    </samedi>
+</semaine>
+
+
+<semaine annee="2024" num="5">
+    <lundi date="21/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="22/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mardi>
+    <mercredi date="23/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="24/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ESPAGNOL</module>
+            <Professeur>LAAMARTI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="25/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="14h30" fin="16h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="16h30" fin="18h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="26/10">
+    </samedi>
+</semaine>
+
+
+<semaine annee="2024" num="6">
+    <lundi date="28/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="29/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mardi>
+    <mercredi date="30/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="31/10">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ESPAGNOL</module>
+            <Professeur>LAAMARTI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="01/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="14h30" fin="16h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="16h30" fin="18h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="02/11">
+    </samedi>
+</semaine>
+
+
+<semaine annee="2024" num="7">
+    <lundi date="04/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>XML</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>MAITRISE ET OPTIMI</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="05/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mardi>
+    <mercredi date="06/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B6</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="07/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>ADMINISTRATION ET</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ESPAGNOL</module>
+            <Professeur>LAAMARTI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ADMINISTRATION SYS</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="08/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODELISATION ORIEN</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="14h30" fin="16h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="16h30" fin="18h00" type="CM">
+            <module>TECHNIQUE DE COMMU</module>
+            <Professeur>ZAAMOUMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="09/11">
+    </samedi>
+</semaine>
+
+
+<semaine annee="2024" num="8">
+    <lundi date="11/11"></lundi>
+    <mardi date="12/11"></mardi>
+    <mercredi date="13/11"></mercredi>
+    <jeudi date="14/11"></jeudi>
+    <vendredi date="15/11"></vendredi>
+    <samedi date="16/11"></samedi>
+</semaine>
+
+<semaine annee="2024" num="9">
+    <lundi date="18/11"></lundi>
+    <mardi date="19/11"></mardi>
+    <mercredi date="20/11"></mercredi>
+    <jeudi date="21/11"></jeudi>
+    <vendredi date="22/11"></vendredi>
+    <samedi date="23/11"></samedi>
+</semaine>
+
+
+<semaine annee="2024" num="10">
+    <lundi date="25/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TD">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="26/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+    </mardi>
+    <mercredi date="27/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="28/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="29/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="30/11">
+    </samedi>
+</semaine>
+
+
+<semaine annee="2024" num="11">
+    <lundi date="02/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TD">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="03/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+    </mardi>
+    <mercredi date="04/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="05/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="06/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="07/12">
+    </samedi>
+</semaine>
+
+
+
+<semaine annee="2024" num="12">
+    <lundi date="09/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TD">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="10/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+    </mardi>
+    <mercredi date="11/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="12/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="13/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="14/12">
+    </samedi>
+</semaine>
+
+
+<semaine annee="2024" num="13">
+    <lundi date="16/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TD">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="17/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+    </mardi>
+    <mercredi date="18/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="19/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="20/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="21/12">
+    </samedi>
+</semaine>
+
+
+
+<semaine annee="2024" num="14">
+    <lundi date="23/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TD">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="24/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+    </mardi>
+    <mercredi date="25/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="26/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="27/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="28/12">
+    </samedi>
+</semaine>
+
+<semaine annee="2025" num="15">
+    <lundi date="30/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TD">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="31/12">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+    </mardi>
+    <mercredi date="01/01">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="02/01">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="03/01">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="04/01">
+    </samedi>
+</semaine>
+
+
+<semaine annee="2025" num="16">
+    <lundi date="06/01">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TD">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="07/01">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+    </mardi>
+    <mercredi date="08/01">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="09/01">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="10/01">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="11/01">
+    </samedi>
+</semaine>
+
+<semaine annee="2025" num="17">
+    <lundi date="13/01"></lundi>
+    <mardi date="14/01"></mardi>
+    <mercredi date="15/01"></mercredi>
+    <jeudi date="16/01"></jeudi>
+    <vendredi date="17/01"></vendredi>
+    <samedi date="18/01"></samedi>
+</semaine>
+
+<semaine annee="2025" num="18">
+    <lundi date="20/01"></lundi>
+    <mardi date="21/01"></mardi>
+    <mercredi date="22/01"></mercredi>
+    <jeudi date="23/01"></jeudi>
+    <vendredi date="24/01"></vendredi>
+    <samedi date="25/01"></samedi>
+</semaine>
+
+<semaine annee="2025" num="19">
+    <lundi date="27/01"></lundi>
+    <mardi date="28/01"></mardi>
+    <mercredi date="29/01"></mercredi>
+    <jeudi date="30/01"></jeudi>
+    <vendredi date="31/01"></vendredi>
+    <samedi date="01/02"></samedi>
+</semaine>
+
+<semaine annee="2025" num="20">
+    <lundi date="03/02">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>BASES DE DONNEES N</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>BASES DE DONNEES N</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="04/02">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>CHAFIK</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>CHAFIK</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </mardi>
+    <mercredi date="05/02">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>TRAITEMENT D'IMAGE</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>TRAITEMENT D'IMAGE</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>MANAGEMENT DE PROJET</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>MANAGEMENT DE PROJET</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="06/02">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="07/02">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>GESTION DES DONNEES</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>GESTION DES DONNEES</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="14h30" fin="16h00" type="CM">
+            <module>COMPTABILITE 2</module>
+            <Professeur>NAITBOUBKER</Professeur>
+            <salle>SALLE B2</salle>
+        </seance>
+        <seance debut="16h30" fin="18h00" type="CM">
+            <module>COMPTABILITE 2</module>
+            <Professeur>NAITBOUBKER</Professeur>
+            <salle>SALLE B2</salle>
+        </seance>
+    </vendredi>
+    <samedi date="08/02">
+    </samedi>
+</semaine>
+
+<semaine annee="2025" num="21">
+    <lundi date="10/02">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>BASES DE DONNEES N</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>BASES DE DONNEES N</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="11/02">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>CHAFIK</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>CHAFIK</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </mardi>
+    <mercredi date="12/02">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>TRAITEMENT D'IMAGE</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>TRAITEMENT D'IMAGE</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>MANAGEMENT DE PROJET</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>MANAGEMENT DE PROJET</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="13/02">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="14/02">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>GESTION DES DONNEES</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>GESTION DES DONNEES</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="14h30" fin="16h00" type="CM">
+            <module>COMPTABILITE 2</module>
+            <Professeur>NAITBOUBKER</Professeur>
+            <salle>SALLE B2</salle>
+        </seance>
+        <seance debut="16h30" fin="18h00" type="CM">
+            <module>COMPTABILITE 2</module>
+            <Professeur>NAITBOUBKER</Professeur>
+            <salle>SALLE B2</salle>
+        </seance>
+    </vendredi>
+    <samedi date="15/02">
+    </samedi>
+</semaine>
+
+
+<semaine annee="2025" num="22">
+    <lundi date="17/02">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>BASES DE DONNEES N</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>BASES DE DONNEES N</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="18/02">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>CHAFIK</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>CHAFIK</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </mardi>
+    <mercredi date="19/02">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>TRAITEMENT D'IMAGE</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>TRAITEMENT D'IMAGE</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>MANAGEMENT DE PROJET</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>MANAGEMENT DE PROJET</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="20/02">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="21/02">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>GESTION DES DONNEES</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>GESTION DES DONNEES</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="14h30" fin="16h00" type="CM">
+            <module>COMPTABILITE 2</module>
+            <Professeur>NAITBOUBKER</Professeur>
+            <salle>SALLE B2</salle>
+        </seance>
+        <seance debut="16h30" fin="18h00" type="CM">
+            <module>COMPTABILITE 2</module>
+            <Professeur>NAITBOUBKER</Professeur>
+            <salle>SALLE B2</salle>
+        </seance>
+    </vendredi>
+    <samedi date="22/02">
+    </samedi>
+</semaine>
+
+
+<semaine annee="2025" num="23">
+    <lundi date="24/02">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>BASES DE DONNEES N</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>BASES DE DONNEES N</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="25/02">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>CHAFIK</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>CHAFIK</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </mardi>
+    <mercredi date="26/02">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>TRAITEMENT D'IMAGE</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>TRAITEMENT D'IMAGE</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>MANAGEMENT DE PROJET</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>MANAGEMENT DE PROJET</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="27/02">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="28/02">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>GESTION DES DONNEES</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>GESTION DES DONNEES</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="14h30" fin="16h00" type="CM">
+            <module>COMPTABILITE 2</module>
+            <Professeur>NAITBOUBKER</Professeur>
+            <salle>SALLE B2</salle>
+        </seance>
+        <seance debut="16h30" fin="18h00" type="CM">
+            <module>COMPTABILITE 2</module>
+            <Professeur>NAITBOUBKER</Professeur>
+            <salle>SALLE B2</salle>
+        </seance>
+    </vendredi>
+    <samedi date="01/03">
+    </samedi>
+</semaine>
+
+
+<semaine annee="2025" num="24">
+    <lundi date="03/03">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>BASES DE DONNEES N</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>BASES DE DONNEES N</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="04/03">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>CHAFIK</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>CHAFIK</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </mardi>
+    <mercredi date="05/03">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>TRAITEMENT D'IMAGE</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>TRAITEMENT D'IMAGE</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>MANAGEMENT DE PROJET</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>MANAGEMENT DE PROJET</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="06/03">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="07/03">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>GESTION DES DONNEES</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>GESTION DES DONNEES</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="14h30" fin="16h00" type="CM">
+            <module>COMPTABILITE 2</module>
+            <Professeur>NAITBOUBKER</Professeur>
+            <salle>SALLE B2</salle>
+        </seance>
+        <seance debut="16h30" fin="18h00" type="CM">
+            <module>COMPTABILITE 2</module>
+            <Professeur>NAITBOUBKER</Professeur>
+            <salle>SALLE B2</salle>
+        </seance>
+    </vendredi>
+    <samedi date="08/03">
+    </samedi>
+</semaine>
+
+<semaine annee="2025" num="25">
+    <lundi date="10/03">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>BASES DE DONNEES N</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>BASES DE DONNEES N</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="11/03">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>CHAFIK</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>CHAFIK</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>PROGRAMMATION DECL</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </mardi>
+    <mercredi date="12/03">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>TRAITEMENT D'IMAGE</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>TRAITEMENT D'IMAGE</module>
+            <Professeur>LACHKAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>MANAGEMENT DE PROJET</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>MANAGEMENT DE PROJET</module>
+            <Professeur>RAHAL AZOUZI</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="13/03">
+        <seance debut="09h00" fin="10h30" type="TP">
+            <module>CRYPTOGRAPHIE</module>
+            <Professeur>LAZAAR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="TP">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>DOT NET C SHARP</module>
+            <Professeur>GHAILANI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="14/03">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>GESTION DES DONNEES</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TP">
+            <module>GESTION DES DONNEES</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="14h30" fin="16h00" type="CM">
+            <module>COMPTABILITE 2</module>
+            <Professeur>NAITBOUBKER</Professeur>
+            <salle>SALLE B2</salle>
+        </seance>
+        <seance debut="16h30" fin="18h00" type="CM">
+            <module>COMPTABILITE 2</module>
+            <Professeur>NAITBOUBKER</Professeur>
+            <salle>SALLE B2</salle>
+        </seance>
+    </vendredi>
+    <samedi date="15/03">
+    </samedi>
+</semaine>
+
+</semaines>

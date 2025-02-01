@@ -1,0 +1,94 @@
+<semaine annee="2024" num="10">
+    <lundi date="25/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>ASSURANCE CONTROL</module>
+            <Professeur>BEN HAMZA</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TD">
+            <module>INTERFACE HOMME MA</module>
+            <Professeur>EL ALAMI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </lundi>
+    <mardi date="26/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="TD">
+            <module>OPTIMISATION ET QU</module>
+            <Professeur>FISSOUNE</Professeur>
+            <salle>SALLE B21</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="CM">
+            <module>ANGLAIS</module>
+            <Professeur>BOURGUIT</Professeur>
+            <salle>SALLE C1</salle>
+        </seance>
+    </mardi>
+    <mercredi date="27/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>PROGRAMMATION ORIENTÉE</module>
+            <Professeur>EL HADDAD</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="13h30" fin="15h00" type="CM">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+        <seance debut="15h30" fin="17h00" type="TP">
+            <module>PROGRAMMATION SYSTÈMES</module>
+            <Professeur>AMECHNOUE</Professeur>
+            <salle>SALLE B22</salle>
+        </seance>
+    </mercredi>
+    <jeudi date="28/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>CYCLE DE VIE LOGIC</module>
+            <Professeur>BADIR</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </jeudi>
+    <vendredi date="29/11">
+        <seance debut="09h00" fin="10h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+        <seance debut="11h00" fin="12h30" type="CM">
+            <module>MODÉLISATION ORIENTÉE</module>
+            <Professeur>EL HAJI</Professeur>
+            <salle>SALLE B20</salle>
+        </seance>
+    </vendredi>
+    <samedi date="30/11">
+    </samedi>
+</semaine>
