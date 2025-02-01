@@ -1,4 +1,14 @@
 
+import os
+import django
+
+# Définir le module des paramètres Django
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "..\App-Gestion-Notes\App_Gestion_Note.settings")  # Remplace par le bon module
+
+# Initialiser Django
+django.setup()
+
+from django.conf import settings
 
 import os
 import subprocess
@@ -11,13 +21,13 @@ except:
     PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 
-def generate_releve_pdf(xml,fo,pdf_filename):
+def generate_pdf(xml, fo, file_type, pdf_filename):
     print(f"📂 Using project root: {PROJECT_ROOT}")
 
     fop_home = os.path.join(PROJECT_ROOT, "fop")
-    xml_file = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note", xml)
-    xslt_file = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note", fo)
-    pdf_output_dir = os.path.join(PROJECT_ROOT, "Xml_files", "releve_note")
+    xml_file = os.path.join(PROJECT_ROOT, "Xml_files", file_type, xml)
+    xslt_file = os.path.join(PROJECT_ROOT, "Xml_files", file_type, fo)
+    pdf_output_dir = os.path.join(PROJECT_ROOT, "Xml_files", file_type)
     pdf_file = os.path.join(pdf_output_dir, pdf_filename)
 
     os.makedirs(pdf_output_dir, exist_ok=True)
@@ -61,53 +71,6 @@ def generate_releve_pdf(xml,fo,pdf_filename):
     return pdf_file
 
 
-def generate_student_card(xml_path, xslfo_path, output_dir, fop_path="fop"):
-    """
-    Génère un fichier PDF dans un répertoire spécifique.
-
-    :param xml_path: Chemin du fichier XML contenant les données de l'étudiant.
-    :param xslfo_path: Chemin du fichier XSL-FO pour la mise en page.
-    :param output_dir: Répertoire où enregistrer le PDF.
-    :param fop_path: Chemin du dossier contenant fop.bat (défaut = "fop").
-    :return: Chemin absolu du fichier PDF généré.
-    """
-    # Vérifier si le répertoire de sortie existe, sinon le créer
-    os.makedirs(output_dir, exist_ok=True)
-
-    # Construire le chemin du fichier de sortie
-    output_pdf = os.path.join(output_dir, "Student_Card.pdf")
-
-    # Construire le chemin de fop.bat
-    fop_path = os.path.abspath("../fop")
-    fop_executable = os.path.join(fop_path, "fop.bat")
-
-    # Vérifier si fop.bat existe
-    if not os.path.exists(fop_executable):
-        raise FileNotFoundError(f"Le fichier {fop_executable} n'existe pas. Vérifiez le chemin.")
-
-    # Construire la commande pour exécuter FOP
-    command = [fop_executable, "-xml", xml_path, "-xsl", xslfo_path, "-pdf", output_pdf]
-
-    try:
-        # Exécuter la commande pour générer le PDF
-        subprocess.run(command, check=True, shell=True)
-        print(f"✅ PDF généré avec succès : {output_pdf}")
-        return os.path.abspath(output_pdf)
-
-    except subprocess.CalledProcessError as e:
-        print(f"❌ Erreur lors de la génération du PDF : {e}")
-        return None
-
-
-# 📌 Exemple d'utilisation
-output_directory = "result"  # Dossier où stocker les PDFs
-
-generate_student_card(
-    xml_path="students/StudentExtracted.xml",
-    xslfo_path="students/student_card.fo",
-    output_dir=output_directory,  # Spécifier le répertoire de sortie
-    fop_path="fop"
-)
 
 
 def clean_xml_content(xml_str):
@@ -193,8 +156,101 @@ def find_student_by_cne(CNE):
         print(f"❌ XML Parsing Error: {e}")
         return
 
+def extract_student_by_cne(CNE):
+    """Extrait un étudiant spécifique de Students_GINF2.xml et enregistre un fichier XML séparé."""
+
+    # Définir les chemins des fichiers
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    xml_file = os.path.join(project_root, "Xml_files", "students", "Students_GINF2.xml").replace("\\", "/")
+    output_dir = os.path.join(project_root, "Xml_files", "students", "ExtractedStudents")
+
+    # Vérifier l'existence du fichier principal
+    if not os.path.exists(xml_file):
+        print(f"❌ ERROR: File not found: {xml_file}")
+        return None
+
+    # Assurer l'existence du dossier de sortie
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Définir le script XQuery pour extraire l'étudiant par CNE
+    xquery_inline = (
+        'declare option output:method "xml"; '
+        'declare option output:encoding "UTF-8"; '
+        f'for $student in doc("{xml_file}")//Student[@CNE="{CNE}"] return $student'
+    )
+    xquery_inline = (
+        'declare option output:method "xml"; '
+        'declare option output:encoding "UTF-8"; '
+        f'for $student in doc("{xml_file}")//Student[@CNE="{CNE}"] return $student'
+    )
+
+    # Définir le chemin de BaseX
+    basex_path = os.path.join(project_root, "BaseX", "bin", "basex.bat")  # Windows
+    if not os.path.exists(basex_path):
+        basex_path = os.path.join(project_root, "BaseX", "bin", "basex")  # Linux/macOS
+
+    # Vérifier l'existence de BaseX
+    if not os.path.exists(basex_path):
+        print(f"❌ ERROR: BaseX executable not found at {basex_path}")
+        return None
+
+    print(f"🔍 Running BaseX from: {basex_path}")
+
+    # Exécuter la requête XQuery via BaseX
+    command = [basex_path, "-q", xquery_inline]
+    print(f"🔍 Running command: {' '.join(command)}")
+
+    try:
+        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+        if result.returncode != 0:
+            print(f"❌ ERROR: BaseX command failed with return code {result.returncode}")
+            print(f"🛑 STDERR: {result.stderr}")
+            return None
+
+        student_xml = result.stdout.strip()
+
+        if not student_xml:
+            print(f"⚠️ No student found with CNE: {CNE}")
+            return None
+
+
+        print(f"✅ Extracted XML: \n{student_xml}")
+
+        # Parser l'XML pour récupérer les informations
+        try:
+            root = ET.fromstring(student_xml)
+
+            first_name = root.find("first_name").text if root.find("first_name") is not None else "Unknown"
+            last_name = root.find("last_name").text if root.find("last_name") is not None else "Unknown"
+
+            # Générer le chemin du fichier de sortie
+            output_filename = f"student_{CNE}_{first_name}_{last_name}.xml"
+            output_path = os.path.join(output_dir, output_filename)
+
+            # Sauvegarde du fichier XML
+            with open(output_path, "w", encoding="utf-8") as file:
+                file.write(student_xml)
+
+            print(f"✅ Student XML saved at: {output_path}")
+            return output_path
+
+        except ET.ParseError as e:
+            print(f"❌ XML Parsing Error: {e}")
+            return None
+
+    except Exception as e:
+        print(f"❌ Unexpected error: {e}")
+        return None
+
+    import django
+    django.setup()
+    from django.conf import settings
+    print(settings.BASE_DIR)
+
 # Example usage
-# find_student_by_cne("21010395")
+
+generate_student_card_pdf(21010261)
 
 # generate_releve_pdf()
 # generate_releve_pdf("releve_note_ABDELOUAHED_ABBAD.xml","Releve_de_Notes.xsl")
