@@ -152,7 +152,93 @@ def extract_student_by_cne(CNE):
     # Définir les chemins des fichiers
     project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     xml_file = os.path.join(project_root, "Xml_files", "students", "Students_GINF2.xml").replace("\\", "/")
-    output_dir = os.path.join(project_root, "Xml_files", "students", "ExtractedStudents")
+    output_dir = os.path.join(project_root, "Xml_files", "students", "Cards")
+
+    # Vérifier l'existence du fichier principal
+    if not os.path.exists(xml_file):
+        print(f"❌ ERROR: File not found: {xml_file}")
+        return None
+
+    # Assurer l'existence du dossier de sortie
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Définir le script XQuery pour extraire l'étudiant par CNE
+    xquery_inline = (
+        'declare option output:method "xml"; '
+        'declare option output:encoding "UTF-8"; '
+        f'for $student in doc("{xml_file}")//Student[@CNE="{CNE}"] return $student'
+    )
+    xquery_inline = (
+        'declare option output:method "xml"; '
+        'declare option output:encoding "UTF-8"; '
+        f'for $student in doc("{xml_file}")//Student[@CNE="{CNE}"] return $student'
+    )
+
+    # Définir le chemin de BaseX
+    basex_path = os.path.join(project_root, "BaseX", "bin", "basex.bat")  # Windows
+    if not os.path.exists(basex_path):
+        basex_path = os.path.join(project_root, "BaseX", "bin", "basex")  # Linux/macOS
+
+    # Vérifier l'existence de BaseX
+    if not os.path.exists(basex_path):
+        print(f"❌ ERROR: BaseX executable not found at {basex_path}")
+        return None
+
+    print(f"🔍 Running BaseX from: {basex_path}")
+
+    # Exécuter la requête XQuery via BaseX
+    command = [basex_path, "-q", xquery_inline]
+    print(f"🔍 Running command: {' '.join(command)}")
+
+    try:
+        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+        if result.returncode != 0:
+            print(f"❌ ERROR: BaseX command failed with return code {result.returncode}")
+            print(f"🛑 STDERR: {result.stderr}")
+            return None
+
+        student_xml = result.stdout.strip()
+
+        if not student_xml:
+            print(f"⚠️ No student found with CNE: {CNE}")
+            return None
+
+        print(f"✅ Extracted XML: \n{student_xml}")
+
+        # Parser l'XML pour récupérer les informations
+        try:
+            root = ET.fromstring(student_xml)
+
+            first_name = root.find("first_name").text if root.find("first_name") is not None else "Unknown"
+            last_name = root.find("last_name").text if root.find("last_name") is not None else "Unknown"
+
+            # Générer le chemin du fichier de sortie
+            output_filename = f"student_{CNE}_{first_name}_{last_name}.xml"
+            output_path = os.path.join(output_dir, output_filename)
+
+            # Sauvegarde du fichier XML
+            with open(output_path, "w", encoding="utf-8") as file:
+                file.write(student_xml)
+
+            print(f"✅ Student XML saved at: {output_path}")
+            return output_path
+
+        except ET.ParseError as e:
+            print(f"❌ XML Parsing Error: {e}")
+            return None
+
+    except Exception as e:
+        print(f"❌ Unexpected error: {e}")
+        return None
+
+def extract_studentATT_by_cne(CNE):
+    """Extrait un étudiant spécifique de Students_GINF2.xml et enregistre un fichier XML séparé."""
+
+    # Définir les chemins des fichiers
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    xml_file = os.path.join(project_root, "Xml_files", "students", "Students_GINF2.xml").replace("\\", "/")
+    output_dir = os.path.join(project_root, "Xml_files", "students", "Attestations")
 
     # Vérifier l'existence du fichier principal
     if not os.path.exists(xml_file):
@@ -305,4 +391,6 @@ def find_semaine_by_num(num):
 
     print(f"✅ Semaine XML saved at: {output_path}")
     return output_filename
-generate_pdf(extract_student_by_cne(21010261),"student_card.xsl","students\Cards","studentCard.pdf")
+#generate_pdf(extract_student_by_cne(21010261),"student_card.xsl","students\Cards","studentCard.pdf")
+generate_pdf(extract_studentATT_by_cne(21010261),"Attestation.xsl","students\Attestations","Attestation.pdf")
+#generate_pdf("TpGroups.xml","tpGroupes.xsl","students","TpGroupes.pdf")
