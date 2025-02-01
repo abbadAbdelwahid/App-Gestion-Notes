@@ -89,4 +89,4 @@ def generate_tp_groups(filePath):
     tree.write("../Xml_files/students/TPGroups.xml", encoding="utf-8", xml_declaration=True)
 
 
-generate_tp_groups("../Xml_files/students/Students_GINF2.xml")
+# generate_tp_groups("../Xml_files/students/Students_GINF2.xml")

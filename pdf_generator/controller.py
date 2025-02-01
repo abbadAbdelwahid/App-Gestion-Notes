@@ -392,5 +392,5 @@ def find_semaine_by_num(num):
     print(f"✅ Semaine XML saved at: {output_path}")
     return output_filename
 #generate_pdf(extract_student_by_cne(21010261),"student_card.xsl","students\Cards","studentCard.pdf")
-generate_pdf(extract_studentATT_by_cne(21010261),"Attestation.xsl","students\Attestations","Attestation.pdf")
+# generate_pdf(extract_studentATT_by_cne(21010261),"Attestation.xsl","students\Attestations","Attestation.pdf")
 #generate_pdf("TpGroups.xml","tpGroupes.xsl","students","TpGroupes.pdf")

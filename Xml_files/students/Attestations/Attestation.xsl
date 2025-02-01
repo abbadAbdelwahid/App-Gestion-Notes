@@ -59,7 +59,7 @@
                     </fo:block>
 
                     <fo:block font-size="14pt" font-weight="bold" space-before="5mm" text-align="center">
-                        <xsl:value-of select="Student/LastName"/> <xsl:value-of select="Student/FirstName"/>
+                        <xsl:value-of select="Student/LastName"/> <xsl:text> </xsl:text> <xsl:value-of select="Student/FirstName"/>
                     </fo:block>
 
                     <fo:block font-size="12pt" text-align="center">
@@ -80,7 +80,7 @@
 
                     <!-- Signature et cachet -->
                     <fo:block text-align="right" space-before="20mm">
-                        Fait à Tanger, le <xsl:value-of select="/Student/DateGeneration"/>
+                        Fait à Tanger, le 02/01/2025
                     </fo:block>
 
                     <fo:block text-align="right" font-size="14pt" font-weight="bold">

@@ -119,7 +119,7 @@
             <option value="">--Choisir--</option>
             <option value="releve">Relevé de note</option>
             <option value="emploi">Emploi du temps</option>
-            <option value="attestationReussite">Attestation de réussite</option>
+            <option value="groupeTP">Groupes de TP</option>
             <option value="attestationScolarite">Attestation de scolarité</option>
             <option value="carte">Carte d'étudiant</option>
           </select>
@@ -276,7 +276,7 @@
         const selected = this.value;
         inputCNEModal.style.display = 'none';
         inputSemaineModal.style.display = 'none';
-        if (selected === 'releve' || selected === 'attestationReussite' || selected === 'attestationScolarite') {
+        if (selected === 'releve' || selected === 'attestationScolarite') {
           inputCNEModal.style.display = 'block';
         } else if (selected === 'emploi') {
           inputSemaineModal.style.display = 'block';
@@ -308,16 +308,14 @@
         } else if (docType === 'emploi') {
           const week = document.getElementById('semaineSelectModal').value;
           url = `/pdfs/edt/${week}/`;
-        } else if (docType === 'attestationReussite') {
-          const cne = document.getElementById('cneSelectModal').value;
-          if (!cne) { alert("Sélectionnez un étudiant."); return; }
-          url = `/pdfs/attestation/reussite/${cne}/`;
+        } else if (docType === 'groupeTP') {
+          url = `/pdfs/groupes/tp/`;
         } else if (docType === 'attestationScolarite') {
           const cne = document.getElementById('cneSelectModal').value;
           if (!cne) { alert("Sélectionnez un étudiant."); return; }
           url = `/pdfs/attestation/scolarite/${cne}/`;
         } else if (docType === 'carte') {
-          url = `/pdfs/attestation/carte/etudiant/`;
+          url = `/pdfs/carte/etudiant/`;
         } else {
           alert("Sélectionnez un type de document.");
           return;
