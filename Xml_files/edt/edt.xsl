@@ -23,8 +23,8 @@
             <fo:page-sequence master-reference="main">
                 <fo:flow flow-name="xsl-region-body">
                     <fo:block span="all" font-family="sans-serif" font-size="2em" font-weight="bold" padding-before="0.3em" padding-after="0.3em" space-before="1em" space-after="1em" space-before.conditionality="retain" space-after.conditionality="retain"  hyphenate="false" line-height-shift-adjustment="disregard-shifts">
-                        <fo:block font-family="Verdana, sans-serif" font-size="22pt" font-weight="bold"  text-align="center" padding="8px">
-                            EMPLOI DU TEMPS
+                        <fo:block font-family="Lato" font-size="22pt" font-weight="regular"  text-align="center" padding="8px">
+                            Emploi Du Temps  (<xsl:value-of select="semaine/lundi/@date"/>/<xsl:value-of select="semaine/@annee"/> - <xsl:value-of select="semaine/samedi/@date"/>/<xsl:value-of select="semaine/@annee"/>)
                         </fo:block>
                     </fo:block>
 

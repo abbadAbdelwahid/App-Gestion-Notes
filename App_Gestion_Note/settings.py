@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'modules',
     'notes',
     'pdf_generator',
+    'interface',
 ]
 
 
@@ -137,7 +138,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Serve XML/XSLT files directly under /students/
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "Xml_files"),  # Keep existing static files
+    os.path.join(BASE_DIR, "Xml_files"),
+    os.path.join(BASE_DIR, "interface", "static"),
+    # Keep existing static files
 ]
 
 

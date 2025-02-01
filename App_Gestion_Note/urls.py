@@ -28,4 +28,5 @@ urlpatterns = [
     path('modules/', include('modules.urls')),
     path('notes/', include('notes.urls')),
     path('pdfs/', include('pdf_generator.urls')),
+path('', include('interface.urls')),
 ]

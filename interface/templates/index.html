@@ -1,0 +1,330 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard GINF2</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <h2>GINF2</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li>
+          <a href="/modules/list/"><i class="fas fa-book"></i> <span>Modules</span></a>
+        </li>
+        <li>
+          <a href="/students/list/"><i class="fas fa-users"></i> <span>Étudiants</span></a>
+        </li>
+        <li>
+          <a href="#" id="notesNav"><i class="fas fa-clipboard"></i> <span>Notes</span></a>
+        </li>
+        <li>
+          <a href="#" id="docsNav"><i class="fas fa-file-pdf"></i> <span>Documents</span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <header class="main-header">
+        <h1>Dashboard GINF2</h1>
+      </header>
+      <div class="cards-grid">
+        <!-- Card: Modules -->
+        <a href="/modules/list/" class="card-link">
+          <div class="card">
+            <i class="fas fa-book card-icon"></i>
+            <h2>Modules</h2>
+            <p>Voir les modules de GINF2</p>
+          </div>
+        </a>
+        <!-- Card: Étudiants -->
+        <a href="/students/list/" class="card-link">
+          <div class="card">
+            <i class="fas fa-users card-icon"></i>
+            <h2>Étudiants</h2>
+            <p>Voir les étudiants de GINF2</p>
+          </div>
+        </a>
+        <!-- Card: Notes -->
+        <div class="card" id="notesCardMain">
+          <i class="fas fa-clipboard card-icon"></i>
+          <h2>Notes</h2>
+          <p>Consulter les notes par module et session</p>
+        </div>
+        <!-- Card: Documents -->
+        <div class="card" id="docsCardMain">
+          <i class="fas fa-file-pdf card-icon"></i>
+          <h2>Documents</h2>
+          <p>Télécharger les documents officiels</p>
+        </div>
+      </div><!-- /.cards-grid -->
+    </div><!-- /.main-content -->
+  </div><!-- /.wrapper -->
+
+  <!-- Modal for Notes Form -->
+  <div id="notesModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeNotesModal">&times;</span>
+      <h2>Consulter les notes</h2>
+      <form id="modalFormNotes">
+        <div class="form-group">
+          <label for="moduleSelectModal">Module</label>
+          <select id="moduleSelectModal" name="module">
+            <option value="GINF31">GINF31</option>
+            <option value="GINF32">GINF32</option>
+            <option value="GINF33">GINF33</option>
+            <option value="GINF34">GINF34</option>
+            <option value="GINF35">GINF35</option>
+            <option value="GINF36">GINF36</option>
+            <option value="GINF41">GINF41</option>
+            <option value="GINF42">GINF42</option>
+            <option value="GINF43">GINF43</option>
+            <option value="GINF44">GINF44</option>
+            <option value="GINF45">GINF45</option>
+            <option value="GINF46">GINF46</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="sessionSelectModal">Session</label>
+          <select id="sessionSelectModal" name="session">
+            <option value="normale">Normale</option>
+            <option value="rattrapage">Rattrapage</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Voir les notes</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal for Documents Form -->
+  <div id="docsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeDocsModal">&times;</span>
+      <h2>Télécharger les documents</h2>
+      <form id="modalFormDocuments">
+        <div class="form-group">
+          <label for="documentTypeSelectModal">Type de document</label>
+          <select id="documentTypeSelectModal" name="documentType">
+            <option value="">--Choisir--</option>
+            <option value="releve">Relevé de note</option>
+            <option value="emploi">Emploi du temps</option>
+            <option value="attestationReussite">Attestation de réussite</option>
+            <option value="attestationScolarite">Attestation de scolarité</option>
+            <option value="carte">Carte d'étudiant</option>
+          </select>
+        </div>
+        <!-- Student selection dropdown (for relevé/attestations) -->
+        <div class="form-group" id="inputCNEModal" style="display: none;">
+          <label for="cneSelectModal">Étudiant</label>
+          <select id="cneSelectModal" name="cne">
+            <option value="">--Sélectionner--</option>
+            <option value="21010395">ABDELOUAHED ABBAD</option>
+            <option value="21010278">SOUFIANE ABDELOUAHAB</option>
+            <option value="21011326">KENZA ABOU-EL KASEM</option>
+            <option value="21010358">AYA AHMYTTOU</option>
+            <option value="21010266">IBTISSAM AIDOUN</option>
+            <option value="20001758">TAREK AL AZAMI</option>
+            <option value="21010287">ELARBI ALLAM</option>
+            <option value="21010482">AYMANE ARIB</option>
+            <option value="21009157">NORELIMANE AZZMAN</option>
+            <option value="21010356">CHAIMAE AZZOUZ</option>
+            <option value="21010411">AHLAM BEN IMRAN</option>
+            <option value="21010476">ABDELILAH BENCHINE</option>
+            <option value="22012817">ANAS BENMGUIRIDA</option>
+            <option value="21009110">AMINE BERKOUKT</option>
+            <option value="21011779">ABDELLAH BIGAGANE</option>
+            <option value="20011005">SAFAA BOUHNINE</option>
+            <option value="21002603">MOHAMMED BOUKER</option>
+            <option value="21010261">YASSER BOULERBAH</option>
+            <option value="21011724">MOHAMMED BOUNOUAR</option>
+            <option value="21009025">MERYEME BOUSSAID</option>
+            <option value="21010326">SOUHAIL CHAIBERRAS</option>
+            <option value="21010299">HOUSSAM CHERKI</option>
+            <option value="21009475">MOAD DAHBI</option>
+            <option value="21010439">IMAD ECHCHRIKI</option>
+            <option value="21010403">EL MEHDI EL ADNANI</option>
+            <option value="21010379">ACHRAF EL AIDI IDRISSI</option>
+            <option value="21010272">OUAAIL EL AOUAD</option>
+            <option value="21010324">MALAK EL BAKALI</option>
+            <option value="20007042">SOUKAYNA EL FERCHOUNI</option>
+            <option value="21010274">YASSINE EL GARTI</option>
+            <option value="21010319">SILIA EL GHAZI</option>
+            <option value="19006658">KENZA EL HARIRI</option>
+            <option value="21010322">MEHDI EL HARRAK</option>
+            <option value="22012491">BASMA EL HLLAFI</option>
+            <option value="21010441">SAIDA EL M'RABET</option>
+            <option value="21010423">ADAM EL MATNI</option>
+            <option value="20007896">ANASS EL OUAHABI</option>
+            <option value="21011787">SARA EL- OTMANI</option>
+            <option value="21010306">OUSSAMA EL-BATTEOUI</option>
+            <option value="21010320">WAIL HADAD</option>
+            <option value="21010359">RIHAB HAJOUZ</option>
+            <option value="21010334">ANAS HILALY</option>
+            <option value="21010011">HANAE IKEN</option>
+            <option value="21010368">ABDELHAK JEBARI HASSANI</option>
+            <option value="20009973">WISSAL KABBOUR</option>
+            <option value="21010231">SOUMAIA KEROUAN SALAH</option>
+            <option value="21011780">RIHAM KONTAR</option>
+            <option value="20000927">SALMANE KORAICHI</option>
+            <option value="20000104">SAFAE LABJAKH</option>
+            <option value="21010740">SAMIA LIO-EDDINE</option>
+            <option value="21010291">MOHAMMED LOUAH</option>
+            <option value="21011784">TAHA NAYA</option>
+            <option value="21010332">AYOUB OULAD MAALEM</option>
+            <option value="20007695">LAMIAE RANBOUK</option>
+            <option value="21010401">MOHAMED SAKHRI</option>
+            <option value="21009322">AYMANE SARSRI</option>
+            <option value="21011667">FIRDAOUS SOUIDAK</option>
+            <option value="21010348">MALAK SOULHI</option>
+            <option value="21010242">ABIR STITOU</option>
+            <option value="21015477">NFALY SYLLA</option>
+            <option value="20001713">AMAL TAIBI IMMRANI</option>
+            <option value="21010255">MALIKA TAJIDI</option>
+            <option value="21011615">FATIMAEZZAHRAE TAOUIL</option>
+            <option value="21010409">KENZA ZAHAR</option>
+          </select>
+        </div>
+        <!-- Week selector (for emploi du temps) -->
+        <div class="form-group" id="inputSemaineModal" style="display: none;">
+          <label for="semaineSelectModal">Semaine</label>
+          <select id="semaineSelectModal" name="semaine">
+            <!-- Options 1 à 24 générées par JavaScript (excluding weeks 8, 9, 17, 18) -->
+          </select>
+        </div>
+        <button type="submit" class="btn">Télécharger</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // --- Modal Elements ---
+      const notesModal = document.getElementById('notesModal');
+      const docsModal = document.getElementById('docsModal');
+      const closeNotesModal = document.getElementById('closeNotesModal');
+      const closeDocsModal = document.getElementById('closeDocsModal');
+
+      // Sidebar nav items trigger modals
+      const notesNav = document.getElementById('notesNav');
+      const docsNav = document.getElementById('docsNav');
+
+      // Main content cards trigger modals (added)
+      const notesCardMain = document.getElementById('notesCardMain');
+      const docsCardMain = document.getElementById('docsCardMain');
+
+      // Open modals when sidebar items or main cards are clicked
+      notesNav.addEventListener('click', function(e) {
+        e.preventDefault();
+        notesModal.style.display = 'block';
+      });
+      docsNav.addEventListener('click', function(e) {
+        e.preventDefault();
+        docsModal.style.display = 'block';
+      });
+      notesCardMain.addEventListener('click', function(e) {
+        notesModal.style.display = 'block';
+      });
+      docsCardMain.addEventListener('click', function(e) {
+        docsModal.style.display = 'block';
+      });
+
+      // Close modal when clicking on the close button
+      closeNotesModal.addEventListener('click', function() {
+        notesModal.style.display = 'none';
+      });
+      closeDocsModal.addEventListener('click', function() {
+        docsModal.style.display = 'none';
+      });
+
+      // Also close modal if clicking outside modal-content
+      window.addEventListener('click', function(e) {
+        if (e.target === notesModal) {
+          notesModal.style.display = 'none';
+        }
+        if (e.target === docsModal) {
+          docsModal.style.display = 'none';
+        }
+      });
+
+      // Populate week selector for Documents modal (1 to 24, excluding 8, 9, 17, 18)
+      const semaineSelectModal = document.getElementById('semaineSelectModal');
+      for (let i = 1; i <= 24; i++) {
+        if (i === 8 || i === 9 || i === 17 || i === 18 || i===19) continue;
+        const opt = document.createElement('option');
+        opt.value = i;
+        opt.textContent = i;
+        semaineSelectModal.appendChild(opt);
+      }
+
+      // Show/hide extra fields in Documents modal
+      const documentTypeSelectModal = document.getElementById('documentTypeSelectModal');
+      const inputCNEModal = document.getElementById('inputCNEModal');
+      const inputSemaineModal = document.getElementById('inputSemaineModal');
+
+      documentTypeSelectModal.addEventListener('change', function() {
+        const selected = this.value;
+        inputCNEModal.style.display = 'none';
+        inputSemaineModal.style.display = 'none';
+        if (selected === 'releve' || selected === 'attestationReussite' || selected === 'attestationScolarite') {
+          inputCNEModal.style.display = 'block';
+        } else if (selected === 'emploi') {
+          inputSemaineModal.style.display = 'block';
+        }
+      });
+
+      // Handle Notes modal form submission
+      const modalFormNotes = document.getElementById('modalFormNotes');
+      modalFormNotes.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const module = document.getElementById('moduleSelectModal').value;
+        const session = document.getElementById('sessionSelectModal').value;
+        let url = session === 'normale'
+          ? `/notes/affichage/normal/${module}/`
+          : `/notes/affichage/ratt/${module}/`;
+        window.location.href = url;
+      });
+
+      // Handle Documents modal form submission
+      const modalFormDocuments = document.getElementById('modalFormDocuments');
+      modalFormDocuments.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const docType = documentTypeSelectModal.value;
+        let url = '';
+        if (docType === 'releve') {
+          const cne = document.getElementById('cneSelectModal').value;
+          if (!cne) { alert("Sélectionnez un étudiant."); return; }
+          url = `/pdfs/releve/${cne}/`;
+        } else if (docType === 'emploi') {
+          const week = document.getElementById('semaineSelectModal').value;
+          url = `/pdfs/edt/${week}/`;
+        } else if (docType === 'attestationReussite') {
+          const cne = document.getElementById('cneSelectModal').value;
+          if (!cne) { alert("Sélectionnez un étudiant."); return; }
+          url = `/pdfs/attestation/reussite/${cne}/`;
+        } else if (docType === 'attestationScolarite') {
+          const cne = document.getElementById('cneSelectModal').value;
+          if (!cne) { alert("Sélectionnez un étudiant."); return; }
+          url = `/pdfs/attestation/scolarite/${cne}/`;
+        } else if (docType === 'carte') {
+          url = `/pdfs/attestation/carte/etudiant/`;
+        } else {
+          alert("Sélectionnez un type de document.");
+          return;
+        }
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>
